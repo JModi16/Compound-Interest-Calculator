@@ -17,5 +17,5 @@ function calculateInvestment() {
     
     let annualIncrease = parseFloat(document.getElementById("annualIncrease").value) / 100 || 0;
 
-    // Convert total time to years
-    let totalTimeInYears = years + (months / 12) + (days / 365 );
+        // Calculate total number of periods
+    }
