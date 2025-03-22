@@ -13,17 +13,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div class ="container">
+        
     <h1>Compound Interest Calculator (£)</h1>
+    <p>Calculate the future value of your investment with compound interest.</p>
+    <p>Compound interest is the addition of interest to the principal sum of a loan or deposit, 
+        or in other words, interest on interest. It is the result of reinvesting interest, 
+        rather than paying it out, so that interest in the next period is then earned on the 
+        principal sum plus previously accumulated interest.</p>
 
-    <label for="principal">Principal Amount (£):</label>
-    <input type="number" id="principal" min="0" step="0.01">
+<div class="input-group">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name"> placeholder="Enter your full name">
+</div>
 
+<div class="input-group">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email"> placeholder="Enter your email address">
+</div>
+
+<div class="input-group">
+    <label for="principal">Initial Investment(£):</label>
+    <input type="number" id="initial Investment" min="0" step="0.01">
+</div>
+
+<div class="input-group">
     <label for="rate">Annual Interest Rate (%):</label>
     <input type="number" id="rate" min="0" step="0.01">
+</div>
 
+<div class="input-group">
     <label for="timesCompounded">Times Compounded Per Year:</label>
     <input type="number" id="timesCompounded" min="1" step="1">
+</div>
 
     <label for="years">Number of Years:</label>
     <input type="number" id="years" min="0" step="1">
