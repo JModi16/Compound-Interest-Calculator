@@ -2,34 +2,42 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
-    color: #333;
-     red green blue)    
-    margin: 20px;
-    padding: 0;
-    background-color: #f4f4f4;
+    color: #333;  
+    margin: 0;
+    padding: 20px;
+   text-align:center;
 }
 
 /* Main Container */
 .container {
-    width: 50%;
-    margin: auto;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 80%;
     padding: 20px;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Title */
+/* Title Headings */
 h1 {
-    text-align: center;
+    
     color: #007BFF; /* Blue */
 }
-/* Input Groups */
+
+h2 {
+    color:#28a745; /* Green */
+}
+
+/*Input styles */
+
 .input-group {
+    text-align: left;
     margin-bottom: 15px;
 }
 
 /* Labels */
+.input-group
 label {
     display: block;
     font-weight: bold;
@@ -38,6 +46,7 @@ label {
 }
 
 /* Input & Select Styling */
+.input-group input,
 input, select {
     width: 100%;
     padding: 10px;
@@ -54,3 +63,43 @@ input:focus, select:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
+/* Button Styling */
+.button {
+    display: inline-block;
+    background-color: #007BFF; /* Blue */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+/* Button Hover Effect */
+.button:hover {
+    background-color: #0056b3; /* Dark Blue */
+}
+
+/* Colors */
+.blue {
+    color: #007BFF;
+}
+.green {
+    color: #28a745;
+}
+.red {
+    color: #dc3545;
+}
+.black {
+    color: #333;
+}
+
+/*responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+} 
+
+ 
