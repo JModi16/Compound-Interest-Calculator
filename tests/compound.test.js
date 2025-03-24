@@ -2,13 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("investmentForm");
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-const P = parseFloat(document.getElementById("initialInvestment").value) || 0;
-const r = parseFloat(document.getElementById("interestRate").value) / 100 || 0;
+const r = (parseFloat(document.getElementById("interestRate").value) || 0) / 100;
 const n = parseInt(document.getElementById("compoundFreq").value) || 1;
 const t = parseInt(document.getElementById("years").value) || 0;
 
 const depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
-const depositFreq = parseInt(document.getElementById("depositFreq").value) || 1;
 const withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
 const withdrawalFreq = parseInt(document.getElementById("withdrawalFreq").value) || 1;
 
