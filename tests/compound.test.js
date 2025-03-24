@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("investmentForm");
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
+    form.addEventListener("submit", function(event) {tElementById("years").value) || 0;
+const depositFreq = parseInt(document.getElementById("depositFreq").value) || 1;
+const withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
+const withdrawalFreq = parseInt(document.getElementById("withdrawalFreq").value) || 1;
 
 
 
