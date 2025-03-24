@@ -11,6 +11,8 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class ="container">
@@ -22,6 +24,61 @@
         rather than paying it out, so that interest in the next period is then earned on the 
         principal sum plus previously accumulated interest.</p>
 
+<!--Form Start-->
+ <form id="compoundInterestForm">
+    <!--Personal Information-->
+    <h2>Personal Information:</h2>
+    <div class="input-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+    </div>
+
+    <div class="input-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Enter your email address">
+    </div>
+
+    <div class="input-group">
+        <label for="principal">Initial Investment(£):</label>
+        <input type="number" id="initialInvestment" min="0" step="0.01">
+    </div>
+
+    <div class="input-group">
+        <label for="rate">Annual Interest Rate (%):</label>
+        <input type="number" id="rate" min="0" step="0.01">
+    </div>
+
+    <div class="input-group">
+        <label for="compoundFrequency">Number of times Compounded Per Year:</label>
+        <select id="compoundFrequency">
+            <option value="1">Annually</option>
+            <option value="2">Semi-Annually</option>
+            <option value="4">Quarterly</option>
+            <option value="12">Monthly</option>
+            <option value="52">Weekly</option>
+            <option value="365">Daily</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label for="timesCompounded">Number of Times Compounded:</label>
+        <input type="number" id="timesCompounded" min="1" step="1">
+    </div>
+
+    <div class="input-group">
+        <label for="years">Number of Years:</label>
+        <input type="number" id="years" min="0" step="1">
+    </div>
+
+    <!--Deposit Contributions and /or Withdrawl requests-->
+
+    <div class="input-group">
+        <label>Additional Contributions:</label>
+        <input type="radio" id="deposit" name="contributionType" value="deposit" checked>
+        <label for="deposit">Deposit</label>
+
+        <input type="radio" id="withdrawal" name="contributionType" value="withdrawal">
+        <label for
 <div class="input-group">
     <label for="name">Full Name:</label>
     <input type="text" id="name"> placeholder="Enter your full name">
@@ -129,7 +186,7 @@
     <input type="number" id="annualDecrease" value="0">
 </div>
 
-<button id ="calculate">Calculate</button>
+<button type ="calculate">Calculate</button>
 
 <h2>Future Results:</h2>
 
@@ -144,7 +201,7 @@
     <p id ="cagr">CAGR: <span class="green">-</span></p>
 </div>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
 
