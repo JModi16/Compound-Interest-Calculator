@@ -2,12 +2,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("investmentForm");
     form.addEventListener("submit", function(event) {
         event.preventDefault();
+        // Get user input values
 const initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
 const annualRate = (parseFloat(document.getElementById("interestRate").value) || 0) / 100;
 const n = parseInt(document.getElementById("compoundFreq").value) || 1;
-
+const years = parseInt(document.getElementById("years").value) || 0;
 
 const depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
+const depositFreq = parseInt(document.getElementById("depositFreq").value) || 1;
 const withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
 const withdrawalFreq = parseInt(document.getElementById("withdrawalFreq").value) || 1;
 
