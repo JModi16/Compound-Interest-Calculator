@@ -39,11 +39,62 @@ function calculateInvestment() {
         }
         balances.push(futureValue);
         yearsArr.push(i);
+        const cagr = (Math.pow(futureValue / initialInvestment, 1 / years) - 1) * 100;
+
+        document.getElementById("futureValue").textContent = futureValue.toFixed(2);
+        document.getElementById("cagr").textContent = cagr.toFixed(2) + "%";
+
+        updateChart(yearsArr, balances);
+        }
     }
+function updateChart(yearsArr, balances) {
+    const ctx = document.getElementById("chart").getContext("2d");
+
+    if (window.investmentchart) {
+        window.investmentchart.destroy();
     }
 
-    const cagr = (Math.pow(futureValue / initialInvestment, 1 / years) - 1) * 100;
-    document.getElementById("futureValue").textContent = futureValue.toFixed(2);
-    document.getElementById("cagr").textContent = cagr.toFixed(2) + "%";
-
+    window.investmentchart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: yearsArr,
+            datasets: [{
+                label: "Balance",
+                data: balances,
+                backgroundColor: "rgba(0, 0, 0, 0)",
+                borderColor: "rgb(75, 192, 192)",
+                borderWidth: 1,
+                fill: true
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    window.investmentchart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: yearsArr,
+            datasets: [{
+                label: "Balance",
+                data: balances,
+                backgroundColor: "rgba(0, 0, 0, 0)",
+                borderColor: "rgb(75, 192, 192)",
+                borderWidth: 1,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {title: { display: true, text: 'Years'}},
+                y: {title: { display: true, text: "Investment (£)" }, beginAtZero: false}
+            }
+        }
+    });
+}
     
