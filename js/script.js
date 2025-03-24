@@ -14,4 +14,5 @@ function calculateInvestment() {
     const depositFreq = parseInt(document.getElementById("depositFrequency").value) || 1;
 
     const withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
-    const withdrawalFreq = parseInt(document.getElementById("withdrawalFrequency").value) || 1;
+        const withdrawalFreq = parseInt(document.getElementById("withdrawalFrequency").value) || 1;
+    }
