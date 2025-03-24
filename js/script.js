@@ -41,3 +41,9 @@ function calculateInvestment() {
         yearsArr.push(i);
     }
     }
+
+    const cagr = (Math.pow(futureValue / initialInvestment, 1 / years) - 1) * 100;
+    document.getElementById("futureValue").textContent = futureValue.toFixed(2);
+    document.getElementById("cagr").textContent = cagr.toFixed(2) + "%";
+
+    
