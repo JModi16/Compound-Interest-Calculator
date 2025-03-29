@@ -25,10 +25,26 @@ document.addEventListener("DOMContentLoaded", function() {
 // Initialize total values
 let totalAmount = initialInvestment;
 let totalContributions = 0;
+
 // Removed duplicate declaration of totalWithdrawals
 
 
-    
+    // Loop through each year to calculate future valuere
+        // Apply deposits and interest compounding for each deposit period
+        for (let j = 0; j < compoundFreq; j++) {
+        totalAmount += depositAmount;
+        totalAmount *= (1+ annualRate / depositFreq);
+        
+        // Calculate deposits and withdrawals for the current year
+        totalContributions += depositAmount * depositFreq;
+        totalWithdrawals += withdrawalAmount * withdrawalFreq;
+
+        // Calculate future value for the current year
+        totalAmount = (totalAmount + totalContributions - totalWithdrawals) * Math.pow(1 + annualinterestRate / compoundFreq, compoundFreq);
+
+        // Update the future value in the UI
+        document.getElementById("futureValue").textContent = totalAmount.toFixed(2);
+    }
 
     let futureValue = initialInvestment;
     let totalDeposits = 0;
