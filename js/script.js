@@ -3,9 +3,37 @@ document.addEventListener("DOMContentLoaded", function() {
     let investmentForm = document.getElementById("investmentForm");
 
     //Handle form submission
-    investmentForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form submission
-    });
+investmentForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get user inputs
+    let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
+    let annualinterestRate = parseFloat(document.getElementById("annualinterestRate").value) || 0;
+    let compoundFreq = parseInt(document.getElementById("compoundFreq").value) || 0;
+    let years = parseInt(document.getElementById("years").value) || 0;
+
+    let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
+    let depositFreq = parseInt(document.getElementById("depositFreq").value) || 0;
+    let annualIncrease = parseFloat(document.getElementById("annualIncrease").value) || 0;
+
+    let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
+    let withdrawalFreq = parseInt(document.getElementById("withdrawalFreq").value) || 0;
+    let withdrawalIncrease = parseFloat(document.getElementById("withdrawalIncrease").value) || 0;
+    let annualDecrease = parseFloat(document.getElementById("annualDecrease").value) || 0;
+
+    // Initialize total values
+    let totalAmount = initialInvestment;
+    let totalContributions = 0;
+    let totalWithdrawals = 0;
+
+    // Loop through each year to calculate future values
+    for (let i = 0; i < years; i++) {
+        // Apply deposits and interest compounding for each deposit period
+        for (let j = 0; j < compoundFreq; j++) {
+            totalAmount += depositAmount;
+            totalAmount *= (1 + annualinterestRate / depositFreq);
+        }
+    }
 });
 // Get user inputs
     let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
@@ -29,7 +57,8 @@ let totalContributions = 0;
 // Removed duplicate declaration of totalWithdrawals
 
 
-    // Loop through each year to calculate future valuere
+    // Loop through each year to calculate future values
+    for (let i = 0; i < years; i++) {
         // Apply deposits and interest compounding for each deposit period
         for (let j = 0; j < compoundFreq; j++) {
         totalAmount += depositAmount;
@@ -44,7 +73,9 @@ let totalContributions = 0;
 
         // Update the future value in the UI
         document.getElementById("futureValue").textContent = totalAmount.toFixed(2);
-    }
+            
+        });
+    
 
     let futureValue = initialInvestment;
     let totalDeposits = 0;
