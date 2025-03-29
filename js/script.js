@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("investmentForm");
+    // Get the form element
     form.addEventListener("submit", function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent form submission
     });
 });
 function calculateInvestment() {
