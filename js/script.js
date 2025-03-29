@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Get the form element
-    form.addEventListener("submit", function(event) {
+    let investmentForm = document.getElementById("investmentForm");
+    investmentForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission
     });
 });
