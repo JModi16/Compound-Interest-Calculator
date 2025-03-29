@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    }
+    
 
     let futureValue = initialInvestment;
     let totalDeposits = 0;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         updateChart(yearsArr, balances);
         }
-    }
+    
 function updateChart(yearsArr, balances) {
     const ctx = document.getElementById("chart").getContext("2d");
 
