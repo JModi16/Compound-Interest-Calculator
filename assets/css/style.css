@@ -62,7 +62,18 @@ input, select {
 .button:hover {
     background-color: #0056b3; /* Dark Blue */
 }
-
+/* Button */
+button {
+    background-color: #007BFF; /* Blue */
+    color: white;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 /* Colors */
 .blue {
     color: #007BFF;
