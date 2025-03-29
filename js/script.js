@@ -1,25 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Get the form element
     let investmentForm = document.getElementById("investmentForm");
+
+    //Handle form submission
     investmentForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission
     });
 });
-function calculateInvestment() {
-    const initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
-    const annualinterestRate = parseFloat(document.getElementById("rate").value) / 100;
-    const compoundFreq = parseInt(document.getElementById("compoundFrequency").value) || 1;
-    const years = parseInt(document.getElementById("years").value) || 0;
+// Get user inputs
+    let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
+    let annualinterestRate = parseFloat(document.getElementById("annualinterestRate").value) || 0;
+    let compoundFreq = parseInt(document.getElementById("compoundFreq").value) || 0;
+    let years = parseInt(document.getElementById("years").value) || 0;
+    
+    let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
+    let depositFreq = parseInt(document.getElementById("depositFreq").value) || 0;
+    let annualIncrease = parseFloat(document.getElementById("annualIncrease").value) || 0;
 
-    const depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
-    const depositFreq = parseInt(document.getElementById("depositFrequency").value) || 1;
+    let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
+    let withdrawalFreq = parseInt(document.getElementById("withdrawalFreq").value) || 0;
+    let withdrawalIncrease = parseFloat(document.getElementById("withdrawalIncrease").value) || 0;
+    let annualDecrease = parseFloat(document.getElementById("annualDecrease").value) || 0;
 
-    const withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
-        const withdrawalFreq = parseInt(document.getElementById("withdrawalFrequency").value) || 1;
 
-    if (initialInvestment <= 0 || annualinterestRate <= 0 || compoundFreq <= 0 || years <= 0) {
-        alert("Please enter valid values");
-        return;
+
     }
 
     let futureValue = initialInvestment;
