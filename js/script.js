@@ -69,8 +69,10 @@ let totalContributions = 0;
             totalAmount += depositAmount;
             totalAmount *= (1+ annualRate /withdrawlFreq);
 
-         // Increase deposit amount by annual increase rate
-         depositAmount += depositAmount * annualIncrease;
+          // Increase deposit amount by annual increase rate
+        }
+        // Increase deposit amount by annual increase rate after all deposit periods in the year
+        depositAmount = increaseDeposit(depositAmount, annualIncrease);
 
          // Decrease withdrawal amount by annual decrease rate
          withdrawalAmount -= withdrawalAmount * annualDecrease;
@@ -80,6 +82,12 @@ let totalContributions = 0;
         // Update total contributions and withdrawals
         totalContributions += depositAmount * depositFreq;
         totalWithdrawals += withdrawalAmount * withdrawalFreq;
+
+          // Increase deposit amount by annual increase rate
+        depositAmount += depositAmount * annualIncrease;
+
+        
+    }
 
         // Calculate future value for the current year
         totalAmount = (totalAmount + totalContributions - totalWithdrawals) * Math.pow(1 + annualinterestRate / compoundFreq, compoundFreq);
@@ -91,6 +99,11 @@ let totalContributions = 0;
     
 
     let futureValue = initialInvestment;
+
+    // Function to increase deposit amount by annual increase rate
+    function increaseDeposit(amount, rate) {
+        return amount + amount * rate;
+    }
     let totalDeposits = 0;
     let totalWithdrawals = 0;
     let balances = [initialInvestment];
