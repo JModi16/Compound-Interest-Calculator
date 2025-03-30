@@ -86,6 +86,9 @@ let totalContributions = 0;
           // Increase deposit amount by annual increase rate
         depositAmount += depositAmount * annualIncrease;
 
+        // Decrease withdrawal amount by annual decrease rate
+        withdrawalAmount -= withdrawalAmount * annualDecrease;
+
         
     }
 
