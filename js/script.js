@@ -68,9 +68,16 @@ let totalContributions = 0;
         for (let k = 0; k < depositFreq; k++) {
             totalAmount += depositAmount;
             totalAmount *= (1+ annualRate /withdrawlFreq);
-        }
 
-        //Update total contributions and withdrawals
+         // Increase deposit amount by annual increase rate
+         depositAmount += depositAmount * annualIncrease;
+
+         // Decrease withdrawal amount by annual decrease rate
+         withdrawalAmount -= withdrawalAmount * annualDecrease;
+     }
+     
+        }
+        // Update total contributions and withdrawals
         totalContributions += depositAmount * depositFreq;
         totalWithdrawals += withdrawalAmount * withdrawalFreq;
 
