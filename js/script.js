@@ -65,6 +65,12 @@ let totalContributions = 0;
         totalAmount *= (1+ annualRate / depositFreq);
         
         // Calculate deposits and withdrawals for the current year
+        for (let k = 0; k < depositFreq; k++) {
+            totalAmount += depositAmount;
+            totalAmount *= (1+ annualRate /withdrawlFreq);
+        }
+
+        //Update total contributions and withdrawals
         totalContributions += depositAmount * depositFreq;
         totalWithdrawals += withdrawalAmount * withdrawalFreq;
 
