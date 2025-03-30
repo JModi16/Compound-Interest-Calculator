@@ -34,6 +34,7 @@ investmentForm.addEventListener("submit", function(event) {
             totalAmount *= (1 + annualinterestRate / depositFreq);
         }
     }
+    });
 });
 // Get user inputs
     let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
@@ -78,108 +79,11 @@ let totalContributions = 0;
          withdrawalAmount -= withdrawalAmount * annualDecrease;
      }
      
-        }
-        // Update total contributions and withdrawals
-        totalContributions += depositAmount * depositFreq;
-        totalWithdrawals += withdrawalAmount * withdrawalFreq;
+     // Display the results
+    document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${totalAmount.toFixed(2)}</span>`;
+    document.getElementById('totalContributions').innerHTML = `Total Contributions: <span class="black">£${totalContributions.toFixed(2)}</span>`;
+    document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
+    document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
+    document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(cagr * 100).toFixed(2)}%</span>`;
 
-          // Increase deposit amount by annual increase rate
-        depositAmount += depositAmount * annualIncrease;
-
-        // Decrease withdrawal amount by annual decrease rate
-        withdrawalAmount -= withdrawalAmount * annualDecrease;
-
-        
     }
-
-        // Calculate future value for the current year
-        totalAmount = (totalAmount + totalContributions - totalWithdrawals) * Math.pow(1 + annualinterestRate / compoundFreq, compoundFreq);
-
-        // Update the future value in the UI
-        document.getElementById("futureValue").textContent = totalAmount.toFixed(2);
-            
-        });
-    
-
-    let futureValue = initialInvestment;
-
-    // Function to increase deposit amount by annual increase rate
-    function increaseDeposit(amount, rate) {
-        return amount + amount * rate;
-    }
-    let totalDeposits = 0;
-    let totalWithdrawals = 0;
-    let balances = [initialInvestment];
-    let yearsArr = [0];
-
-    const compoundFactor = Math.pow(1 + annualinterestRate / compoundFreq, compoundFreq);
-
-    for (let i = 1; i <= years; i++) {
-        for (let j = 0; j < compoundFreq; j++) {
-            totalDeposits += depositAmount * depositFreq / compoundFreq;
-            totalWithdrawals += withdrawalAmount * withdrawalFreq / compoundFreq;
-            futureValue += depositAmount * depositFreq / compoundFreq;
-            futureValue -= withdrawalAmount * withdrawalFreq / compoundFreq;
-            futureValue *= Math.pow(1 + annualinterestRate / compoundFreq, 1 / compoundFreq);
-        }
-        balances.push(futureValue);
-        yearsArr.push(i);
-        const cagr = (Math.pow(futureValue / initialInvestment, 1 / years) - 1) * 100;
-
-        document.getElementById("futureValue").textContent = futureValue.toFixed(2);
-        document.getElementById("cagr").textContent = cagr.toFixed(2) + "%";
-
-        updateChart(yearsArr, balances);
-        }
-    
-function updateChart(yearsArr, balances) {
-    const ctx = document.getElementById("chart").getContext("2d");
-
-    if (window.investmentchart) {
-        window.investmentchart.destroy();
-    }
-
-    window.investmentchart = new Chart(ctx, {
-        type: "line",
-        data: {
-            labels: yearsArr,
-            datasets: [{
-                label: "Balance",
-                data: balances,
-                backgroundColor: "rgba(0, 0, 0, 0)",
-                borderColor: "rgb(75, 192, 192)",
-                borderWidth: 1,
-                fill: true
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-    window.investmentchart = new Chart(ctx, {
-        type: "line",
-        data: {
-            labels: yearsArr,
-            datasets: [{
-                label: "Balance",
-                data: balances,
-                backgroundColor: "rgba(0, 0, 0, 0)",
-                borderColor: "rgb(75, 192, 192)",
-                borderWidth: 1,
-                fill: true
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                x: {title: { display: true, text: 'Years'}},
-                y: {title: { display: true, text: "Investment (£)" }, beginAtZero: false}
-            }
-        }
-    });
-}
-    
