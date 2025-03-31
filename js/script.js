@@ -79,7 +79,7 @@ let totalContributions = 0;
         }
 
         // Calculate Compound Annual Growth Rate (CAGR)
-        const cagr = Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
+        let cagr = Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
 
           // Display the results
     document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${totalAmount.toFixed(2)}</span>`;
