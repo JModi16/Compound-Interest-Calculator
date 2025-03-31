@@ -32,10 +32,9 @@ investmentForm.addEventListener("submit", function(event) {
         for (let j = 0; j < compoundFreq; j++) {
             totalAmount += depositAmount;
             totalAmount *= (1 + annualinterestRate / depositFreq);
-        }
     }
-    });
-});
+    }
+}));
 // Get user inputs
     let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
     let annualinterestRate = parseFloat(document.getElementById("annualinterestRate").value) || 0;
@@ -68,18 +67,13 @@ let totalContributions = 0;
         // Calculate deposits and withdrawals for the current year
         for (let k = 0; k < depositFreq; k++) {
             totalAmount += depositAmount;
-            totalAmount *= (1+ annualRate /withdrawlFreq);
-
-          // Increase deposit amount by annual increase rate
-        }
-        // Increase deposit amount by annual increase rate after all deposit periods in the year
-        depositAmount = increaseDeposit(depositAmount, annualIncrease);
-
-         // Decrease withdrawal amount by annual decrease rate
-         withdrawalAmount -= withdrawalAmount * annualDecrease;
-     }
-     
-     // Display the results
-    SSed(2)}%</span>`;
-
-    }
+            totalAmount *= (1 + annualRate / withdrawalFreq);
+    
+              // Increase deposit amount by annual increase rate
+            }
+            // Increase deposit amount by annual increase rate after all deposit periods in the year
+            depositAmount = increaseDeposit(depositAmount, annualIncrease);
+    
+             // Decrease withdrawal amount by annual decrease rate
+            withdrawalAmount -= withdrawalAmount * annualDecrease;
+           
