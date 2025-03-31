@@ -102,4 +102,12 @@ let totalContributions = 0;
                 datasets: [{
                     label: 'Investment Growth',
                     data: [futureValue, totalContributions, totalWithdrawals, totalInterest],
-              
+                    label: 'Amount (£)',
+                    data: [futureValue, totalContributions, totalWithdrawals, totalInterest, cagr * 100],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
