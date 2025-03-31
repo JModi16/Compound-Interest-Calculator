@@ -91,4 +91,7 @@ let totalContributions = 0;
      // Call the functiion to display chart
      updateChart(totalAmount, totalContributions, totalWithdrawals, cagr);
 
-     
+     // Function to update the chart
+    function updateChart(futureValue, totalContributions, totalWithdrawals, totalInterest, cagr) {
+    const ctx = document.getElementById('investmentChart').getContext('2d');
+    const chart = new Chart(ctx, {f
