@@ -95,3 +95,11 @@ let totalContributions = 0;
     function updateChart(futureValue, totalContributions, totalWithdrawals, totalInterest, cagr) {
     const ctx = document.getElementById('investmentChart').getContext('2d');
     const chart = new Chart(ctx, {f
+            
+            type: 'bar',
+            data: {
+                labels: ['Future Value', 'Total Contributions', 'Total Withdrawals', 'Total Interest'],
+                datasets: [{
+                    label: 'Investment Growth',
+                    data: [futureValue, totalContributions, totalWithdrawals, totalInterest],
+              
