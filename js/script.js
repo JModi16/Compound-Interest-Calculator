@@ -125,6 +125,15 @@ let totalContributions = 0;
                         beginAtZero: true
                     }
                 }
-            }
+            }plugins: {
+                datalabels: {
+                    display: true,
+                    color: 'black',
+                    align: 'end',
+                    anchor: 'end',
+                    formatter: function(value) {
+                        return '£' + parseFloat(value).toFixed(2);
+
+
         });
     }
