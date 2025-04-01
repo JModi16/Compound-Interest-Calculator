@@ -31,7 +31,7 @@ investmentForm.addEventListener("submit", function(event) {
         // Apply deposits and interest compounding for each deposit period
         for (let j = 0; j < compoundFreq; j++) {
             totalAmount += depositAmount;
-            totalAmount *= (1 + annualinterestRate / depositFreq);
+            totalAmount *= (1 + annualinterestRate / compoundFreq);
     }
     }
 }));
