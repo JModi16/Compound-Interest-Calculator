@@ -43,13 +43,18 @@
     </div>
 
     <div class="input-group">
-        <label for="annualRate">Annual Interest Rate (%):</label>
+        <label for="interest-rate">Interest Rate (%):</label>
         <input type="number" id="annualRate" min="0" step="0.01">
     </div>
 
     <div class="input-group">
-        <label for="compoundFrequency">Number of times Compounded:</label>
-        <select id="compoundFrequency">
+        <label for="years">Number of Years:</label>
+        <input type="number" id="years" min="0" step="1">
+    </div>
+
+    <div class="input-group">
+        <label for="compoundfrequency">Number of times Compounded:</label>
+        <select id="compoundfrequency" name="compoundfrequency">
             <option value="1">Annually</option>
             <option value="2">Semi-Annually</option>
             <option value="4">Quarterly</option>
@@ -59,24 +64,9 @@
         </select>
     </div>
 
-    <div class="input-group">
-        <label for="years">Number of Years:</label>
-        <input type="number" id="years" min="0" step="1">
-    </div>
+   <button id ="calculate-button" type="button">Calculate My Investment</button>
+   <div id="result">>0</div>
 
-    <!--Deposit Contributions and /or Withdrawl requests-->
-
-    <div class="input-group">
-        <label>Additional Contributions:</label>
-        <input type="radio" id="deposit" name="contributionType" value="deposit" checked>
-        <label for="deposit">Deposit</label>
-
-        <input type="radio" id="withdrawal" name="contributionType" value="withdrawal">
-        <label for="withdrawal">Withdrawal</label>
-        
-
-        <input type="radio" id="both" name="contributionType" value="both">
-        <label for="both">Both</label>
 
 
 <!--Deposit Inputs-->
@@ -98,11 +88,7 @@
         </select>
     </div>
 
-    <div class="input-group">
-        <label for="annualIncrease">Annual Deposit Increase:</label>
-        <input type="number" id="annualIncrease" value="0">
-    </div>
-</div>
+   
 
 <!--Withdrawal Inputs-->
 <div id="withdrawalInputs">
@@ -129,11 +115,6 @@
     <input type="number" id="annualDecrease" value="0">
 </div>
 
-<!-- Submit Button -->
-    <div class="input-group">
-        <button type="submit" id="submit">Calculate</button>
-    </div>
-<h2>Future Results:</h2>
 
 <!--Results-->
 
