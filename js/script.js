@@ -32,9 +32,15 @@ investmentForm.addEventListener("submit", function(event) {
         for (let j = 0; j < compoundFreq; j++) {
             totalAmount += depositAmount;
             totalAmount *= (1 + annualinterestRate / compoundFreq);
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    });
     }
-    }
-}));
+});
 // Get user inputs
     let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
     let annualinterestRate = parseFloat(document.getElementById("annualinterestRate").value) || 0;
@@ -125,7 +131,8 @@ let totalContributions = 0;
                         beginAtZero: true
                     }
                 }
-            }plugins: {
+            },
+            plugins: {
                 datalabels: {
                     display: true,
                     color: 'black',
@@ -133,7 +140,6 @@ let totalContributions = 0;
                     anchor: 'end',
                     formatter: function(value) {
                         return '£' + parseFloat(value).toFixed(2);
-
-
-        });
-    }
+                    }
+                        }
+               
