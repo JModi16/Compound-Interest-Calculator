@@ -26,3 +26,11 @@
   border-radius: 5px;
   cursor: pointer;
 }
+#calculate-button:hover {
+  background-color: #45a049;
+}
+#results {
+  font-size: 2em;
+  margin-top: 20px;
+  text-align:center;
+}
