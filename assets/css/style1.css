@@ -1,0 +1,119 @@
+* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;  
+    margin: 0;
+    padding: 0;
+    display: flex;
+   text-align:center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Main Container */
+.container {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 80%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Headings */
+h1 {
+    
+    color: #007BFF; /* Blue */
+}
+
+h2 {
+    color:#28a745; /* Green */
+}
+
+/*Input styles */
+
+.input-group {
+    
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.input-group
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+/* Button Hover Effect */
+.button:hover {
+    background-color: #0056b3; /* Dark Blue */
+}
+/* Button */
+button {
+    background-color: #007BFF; /* Blue */
+    color: white;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+/* Colors */
+.blue {
+    color: #007BFF;
+}
+.green {
+    color: #28a745;
+}
+.red {
+    color: #dc3545;
+}
+.black {
+    color: #333;
+}
+
+/*Radio Buttons */
+.input-group input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/*responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+} 
+
+ /*results */
+ #results {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef; /* Light Gray */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+ }
+
+ /*chart */
+canvas {
+   width:100%;
+   margin-top: 20px;
+}
+
