@@ -33,6 +33,14 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin: 50px auto; /* Centre form horizontally */
 }
+
+h1,h2, p {
+  color: #4CAF50;
+  margin-bottom:20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
 #interest-calculator  .input-group {
   margin-bottom: 15px;
   font-size: 16px;
