@@ -56,4 +56,16 @@ body {
   
   margin-top: 20px;
   text-align:center;
+  padding: 10px;
+  background: #e6f7ff;
+  border-radius: 5px;
 }
+
+.black {
+  color: black;}
+  .blue { 
+  color: blue;}
+  .red {
+  color: red;}
+  .green {
+  color: green;}
