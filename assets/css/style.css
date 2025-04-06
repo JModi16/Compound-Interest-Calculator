@@ -1,5 +1,4 @@
 #interest-calculator {
-  
   text-align: center;
   border:5px solid #4CAF50;
   border-radius:25px;
@@ -15,11 +14,11 @@
 }
 
 #calculate-button {
-  font-size: 24px;
+  font-size: 1em;
   padding: 10px 20px;
   background-color: #4CAF50;
-  width:200px;
-  height:100px;
+  width:175px;
+  height:50px;
   color: white;
   border: none;
   border-radius: 5px;
