@@ -74,6 +74,13 @@ h1, h2, p {
   transition: border-color 0.3s ease
 }
 
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
 #calculate-button {
   font-size: 1em;
   padding: 10px 20px;
