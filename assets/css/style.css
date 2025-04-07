@@ -16,6 +16,7 @@ body {
   --border-radius: 15px;
   --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   --primary-color: #4CAF50;
+  --font-family: 'Arial', sans-serif;
 }
 
 .container {
@@ -41,10 +42,10 @@ body {
   margin: 50px auto; /* Centre form horizontally */
 }
 
-h1,h2, p {
-  color: #4CAF50;
-  margin-bottom:20px;
-  font-family: 'Arial', sans-serif;
+h1, h2, p {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-family: var(--font-family);
   text-align: center;
 }
 
