@@ -15,6 +15,7 @@ body {
 :root {
   --border-radius: 15px;
   --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  --primary-color: #4CAF50;
 }
 
 .container {
@@ -30,7 +31,7 @@ body {
 
 #interest-calculator {
   text-align: center;
-  border:2px solid #4CAF50;
+  border:2px solid var(--primary-color);
   border-radius:25px;
   padding:20px;
   width: 400px;
