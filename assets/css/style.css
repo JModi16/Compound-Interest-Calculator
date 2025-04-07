@@ -33,14 +33,14 @@ body {
 #interest-calculator {
   text-align: center;
   border:2px solid var(--primary-color);
-  border-radius: var(--border-radius)
+  border-radius: var(--border-radius);
   padding:30px;
-  width: 100%
+  width: 100%;
   max-width: 600px;
   background-color: whitesmoke;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin: 50px auto; /* Centre form horizontally */
-}
+
 
 h1, h2, p {
   color: var(--primary-color);
@@ -83,15 +83,15 @@ h1, h2, p {
 
 #calculate-button {
   font-size: 1em;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  width:175px;
-  height:50px;
+  padding: 12px 25px;
+  background-color: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
 #calculate-button:hover {
   background-color: #45a049;
 }
