@@ -12,15 +12,14 @@ body {
 }
 
 /* Container */
-.container
-{
-    background:whitesmoke;
+.container {
+    background: whitesmoke;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 50%;
-    max-width:600px;
-  }
+    max-width: 600px;
+}
 
 
 #interest-calculator {
@@ -89,10 +88,15 @@ h1,h2, p {
 }
 
 .black {
-  color: black;}
-  .blue { 
-  color: blue;}
-  .red {
-  color: red;}
-  .green {
-  color: green;}
+.black {
+    color: black;
+}
+.blue {
+    color: blue;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
