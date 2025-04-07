@@ -50,11 +50,10 @@ h1, h2, p {
 }
 
 #interest-calculator  .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 16px;
-  text-align:right;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
 }
 
