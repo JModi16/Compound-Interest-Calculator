@@ -33,14 +33,9 @@ investmentForm.addEventListener("submit", function(event) {
             totalAmount += depositAmount;
             totalAmount *= (1 + annualinterestRate / compoundFreq);
                             }
-                        }
-                    }
-                }
-            });
-        }
-    });
-    }
-});
+                        
+)
+)
 // Get user inputs
     let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
     let annualinterestRate = parseFloat(document.getElementById("annualinterestRate").value) || 0;
