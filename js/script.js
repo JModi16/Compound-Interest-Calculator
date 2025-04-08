@@ -32,14 +32,18 @@ investmentForm.addEventListener("submit", function(event) {
         for (let j = 0; j < depositFreq; j++) {
             if (depositAmount > 0) { //Only apply if deposit amount is greater than 0
                 totalAmount += depositAmount;
-                totalAmount *= (1 + annualinterestRate / depositFreq);
+                                totalAmount *= (1 + annualinterestRate / depositFreq);
+                            }
+                }
             }
         }
-            // Apply withdrawals and interest compounding for each withdrawal period
-            for (let k = 0; k < withdrawlFreq; k++) {
-                if (withdrawalAmount > 0) { //Only apply if withdrawal amount is greater than 0
+        // Apply withdrawals and interest compounding for each withdrawal period
+            for (let k = 0; k < withdrawalFreq; k++) {
+                if (withdrawalAmount > 0 && totalAmount >= withdrawalAmount) { // Ensure withdrawal does not exceed total amount
                     totalAmount -= withdrawalAmount;
                     totalAmount *= (1 + annualinterestRate / withdrawalFreq);
+                } else if (totalAmount < withdrawalAmount) {
+                    break; // Stop further withdrawals if totalAmount is insufficient
                 }
             }
           // Update total contributions and withdrawals
