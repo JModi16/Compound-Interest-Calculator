@@ -46,11 +46,6 @@ investmentForm.addEventListener("submit", function(event) {
              
             }
             
-            // Increase deposit amount by annual increase rate after all deposit periods in the year
-            depositAmount = increaseDeposit(depositAmount, annualIncrease);
-    
-             // Decrease withdrawal amount by annual decrease rate
-            withdrawalAmount -= withdrawalAmount * annualDecrease;
         }
 
         // Calculate Compound Annual Growth Rate (CAGR)
