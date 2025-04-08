@@ -8,7 +8,7 @@ investmentForm.addEventListener("submit", function(event) {
 
     // Get user inputs
     let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
-    let annualinterestRate = parseFloat(document.getElementById("interest-rate").value) || 0;
+    let annualinterestRate = (parseFloat(document.getElementById("interest-rate").value) || 0) / 100;
     let compoundFreq = parseInt(document.getElementById("compoundfrequency").value) || 0;
     let years = parseInt(document.getElementById("years").value) || 0;
 
