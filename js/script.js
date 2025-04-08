@@ -46,6 +46,12 @@ investmentForm.addEventListener("submit", function(event) {
           totalContributions += depositAmount * depositFreq;
           totalWithdrawals += withdrawalAmount * withdrawalFreq;
 
+            // Increase deposit amount by annual increase rate
+            if (depositAmount > 0) {
+                depositAmount += depositAmount * annualIncrease;
+            }
+        }
+
         // Calculate Compound Annual Growth Rate (CAGR)
         let cagr = Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
 
