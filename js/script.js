@@ -27,13 +27,17 @@ investmentForm.addEventListener("submit", function(event) {
     let totalWithdrawals = 0;
 
     // Loop through each year to calculate future values
-    for (let i = 0; i < years; i++) {
-        // Apply deposits and interest compounding for each deposit period
-        for (let j = 0; j < depositFreq; j++) {
-            if (depositAmount > 0) { //Only apply if deposit amount is greater than 0
-            totalAmount += depositAmount;
-            totalAmount *= (1 + annualinterestRate / compoundFreq);
 
+
+        } 
+        // Apply withdrawals and interest compounding for each withdrawal period
+
+        for (let k = 0; k < withdrawalFreq; k++) {
+            if (withdrawalAmount > 0) { //Only apply if withdrawal amount is greater than 0
+                totalAmount -= withdrawalAmount;
+                totalAmount *= (1 + annualinterestRate / withdrawalFreq);
+            }
+        }
                      
 // Get user inputs
     let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
