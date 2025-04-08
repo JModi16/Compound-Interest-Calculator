@@ -42,7 +42,9 @@ investmentForm.addEventListener("submit", function(event) {
                     totalAmount *= (1 + annualinterestRate / withdrawalFreq);
                 }
             }
-          
+          // Update total contributions and withdrawals
+          totalContributions += depositAmount * depositFreq;
+          totalWithdrawals += withdrawalAmount * withdrawalFreq;
 
         // Calculate Compound Annual Growth Rate (CAGR)
         let cagr = Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
