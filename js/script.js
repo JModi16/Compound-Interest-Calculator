@@ -43,10 +43,14 @@ investmentForm.addEventListener("submit", function(event) {
                 }
             }
         
-             
+          // Applu withdrawls and interest compounding for each withdrawal period 
+        for (let k = 0; k < withdrawalFreq; k++) {
+            if (withdrawalAmount > 0) { //Only apply if withdrawal amount is greater than 0
+                totalAmount -= withdrawalAmount;
+                totalAmount *= (1 + annualinterestRate / withdrawalFreq);
             }
-            
         }
+          
 
         // Calculate Compound Annual Growth Rate (CAGR)
         let cagr = Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
