@@ -13,11 +13,11 @@ investmentForm.addEventListener("submit", function(event) {
     let years = parseInt(document.getElementById("years").value) || 0;
 
     let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
-    let depositFreq = parseInt(document.getElementById("depositFreq").value) || 0;
+    let depositFreq = parseInt(document.getElementById("depositFrequency").value) || 0;
     let annualIncrease = parseFloat(document.getElementById("annualIncrease").value) || 0;
 
     let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
-    let withdrawalFreq = parseInt(document.getElementById("withdrawalFreq").value) || 0;
+    let withdrawalFreq = parseInt(document.getElementById("withdrawalFrequency").value) || 0;
     let withdrawalIncrease = parseFloat(document.getElementById("withdrawalIncrease").value) || 0;
     let annualDecrease = parseFloat(document.getElementById("annualDecrease").value) || 0;
 
