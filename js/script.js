@@ -43,11 +43,8 @@ investmentForm.addEventListener("submit", function(event) {
                 }
             }
         
-                // Increase deposit amount by annual increase rate
-                depositAmount = increaseDeposit(depositAmount, annualIncrease);
+             
             }
-            // Increase deposit amount by annual increase rate after all deposit periods in the year
-            depositAmount = increaseDeposit(depositAmount, annualIncrease);
             
             // Increase deposit amount by annual increase rate after all deposit periods in the year
             depositAmount = increaseDeposit(depositAmount, annualIncrease);
