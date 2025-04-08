@@ -48,29 +48,7 @@ investmentForm.addEventListener("submit", function(event) {
             }
             // Increase deposit amount by annual increase rate after all deposit periods in the year
             depositAmount = increaseDeposit(depositAmount, annualIncrease);
-        } 
-        // Apply withdrawals and interest compounding for each withdrawal period
-
-        for (let k = 0; k < withdrawalFreq; k++) {
-            if (withdrawalAmount > 0) { //Only apply if withdrawal amount is greater than 0
-                totalAmount -= withdrawalAmount;
-                totalAmount *= (1 + annualinterestRate / withdrawalFreq);
-            }
-        }
-    // Loop through each year to calculate future values
-    for (let i = 0; i < years; i++) {
-        // Apply deposits and interest compounding for each deposit period
-        for (let j = 0; j < compoundFreq; j++) {
-        totalAmount += depositAmount;
-        totalAmount *= (1+ annualRate / depositFreq);
-        
-        // Calculate deposits and withdrawals for the current year
-        for (let k = 0; k < depositFreq; k++) {
-            totalAmount += depositAmount;
-            totalAmount *= (1 + annualRate / withdrawalFreq);
-    
-              // Increase deposit amount by annual increase rate
-            }
+            
             // Increase deposit amount by annual increase rate after all deposit periods in the year
             depositAmount = increaseDeposit(depositAmount, annualIncrease);
     
