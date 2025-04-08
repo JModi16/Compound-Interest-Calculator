@@ -18,8 +18,8 @@ investmentForm.addEventListener("submit", function(event) {
 
     let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
     let withdrawalFreq = parseInt(document.getElementById("withdrawalFrequency").value) || 0;
-    let withdrawalIncrease = parseFloat(document.getElementById("withdrawalIncrease").value) || 0;
-    let annualDecrease = parseFloat(document.getElementById("annualDecrease").value) || 0;
+    let withdrawalIncrease = parseFloat(document.getElementById("withdrawalIncrease").value) || 0;/*may not be required*/
+    let annualDecrease = parseFloat(document.getElementById("annualDecrease").value) || 0;/*may not be required*/
 
     // Initialize total values
     let totalAmount = initialInvestment;
@@ -57,8 +57,8 @@ investmentForm.addEventListener("submit", function(event) {
 // Initialize total values
 let totalAmount = initialInvestment;
 let totalContributions = 0;
+let totalWithdrawals = 0; // 
 
-// Removed duplicate declaration of totalWithdrawals
 
 
     // Loop through each year to calculate future values
