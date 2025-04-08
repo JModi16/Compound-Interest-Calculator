@@ -57,15 +57,6 @@ investmentForm.addEventListener("submit", function(event) {
                 totalAmount *= (1 + annualinterestRate / withdrawalFreq);
             }
         }
-    
-
-// Initialize total values
-let totalAmount = initialInvestment;
-let totalContributions = 0;
-let totalWithdrawals = 0; // 
-
-
-
     // Loop through each year to calculate future values
     for (let i = 0; i < years; i++) {
         // Apply deposits and interest compounding for each deposit period
