@@ -41,8 +41,7 @@ investmentForm.addEventListener("submit", function(event) {
                     totalAmount -= withdrawalAmount;
                     totalAmount *= (1 + annualinterestRate / withdrawalFreq);
                 }
-                totalAmount += depositAmount;
-                totalAmount *= (1 + annualinterestRate / depositFreq);
+            }
         
                 // Increase deposit amount by annual increase rate
                 depositAmount = increaseDeposit(depositAmount, annualIncrease);
@@ -58,21 +57,7 @@ investmentForm.addEventListener("submit", function(event) {
                 totalAmount *= (1 + annualinterestRate / withdrawalFreq);
             }
         }
-                     
-// Get user inputs
-    let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
-    let annualinterestRate = parseFloat(document.getElementById("annualinterestRate").value) || 0;
-    let compoundFreq = parseInt(document.getElementById("compoundFreq").value) || 0;
-    let years = parseInt(document.getElementById("years").value) || 0;
     
-    let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
-    let depositFreq = parseInt(document.getElementById("depositFreq").value) || 0;
-    let annualIncrease = parseFloat(document.getElementById("annualIncrease").value) || 0;
-
-    let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
-    let withdrawalFreq = parseInt(document.getElementById("withdrawalFreq").value) || 0;
-    let withdrawalIncrease = parseFloat(document.getElementById("withdrawalIncrease").value) || 0;
-    let annualDecrease = parseFloat(document.getElementById("annualDecrease").value) || 0;
 
 // Initialize total values
 let totalAmount = initialInvestment;
