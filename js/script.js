@@ -33,7 +33,8 @@ investmentForm.addEventListener("submit", function(event) {
             if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
                 totalAmount += depositAmount;
                 totalAmount *= (1 + annualinterestRate / (depositFreq * years));
-            }
+                }
+            });
         }
         // Apply withdrawals and interest compounding for each withdrawal period
         for (let k = 0; k < withdrawalFreq; k++) {
@@ -70,8 +71,8 @@ investmentForm.addEventListener("submit", function(event) {
             if (depositAmount > 0) {
                 depositAmount += depositAmount * annualIncrease;
             }
-        }
-
+        // Increase withdrawal amount by annual increase rate
+    
         // Calculate Compound Annual Growth Rate (CAGR)
         let cagr = 0;
         if (initialInvestment > 0) {
@@ -132,5 +133,7 @@ investmentForm.addEventListener("submit", function(event) {
                     formatter: function(value) {
                         return '£' + parseFloat(value).toFixed(2);
                     }
-                        }
-               
+                }
+            }
+        });
+    }
