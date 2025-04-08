@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Get the form element
-    let investmentForm = document.getElementById("investmentForm");
+    let investmentForm = document.getElementById("CompoundInterestForm");
 
     //Handle form submission
 investmentForm.addEventListener("submit", function(event) {
@@ -33,9 +33,12 @@ investmentForm.addEventListener("submit", function(event) {
             totalAmount += depositAmount;
             totalAmount *= (1 + annualinterestRate / compoundFreq);
                             }
-                        
-)
-)
+                        }
+                    }
+                }
+            }
+
+))
 // Get user inputs
     let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
     let annualinterestRate = parseFloat(document.getElementById("annualinterestRate").value) || 0;
