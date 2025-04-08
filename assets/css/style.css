@@ -94,14 +94,17 @@ h1, h2, p {
 
 #calculate-button:hover {
   background-color: #45a049;
+  trasform:scale(1.05);
 }
 #results {
   
   margin-top: 20px;
   text-align:center;
-  padding: 10px;
+  padding: 15px;
   background: #e6f7ff;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  font-size: 1.2em;
 }
 
 .black {
