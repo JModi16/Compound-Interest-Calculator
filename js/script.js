@@ -29,16 +29,12 @@ investmentForm.addEventListener("submit", function(event) {
     // Loop through each year to calculate future values
     for (let i = 0; i < years; i++) {
         // Apply deposits and interest compounding for each deposit period
-        for (let j = 0; j < compoundFreq; j++) {
+        for (let j = 0; j < depositFreq; j++) {
+            if (depositAmount > 0) { //Only apply if deposit amount is greater than 0
             totalAmount += depositAmount;
             totalAmount *= (1 + annualinterestRate / compoundFreq);
-                            }
-                        }
-                    }
-                }
-            }
 
-))
+                     
 // Get user inputs
     let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
     let annualinterestRate = parseFloat(document.getElementById("annualinterestRate").value) || 0;
