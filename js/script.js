@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Loop through each year to calculate future values
         for (let i = 0; i < years; i++) {
             // Apply deposits and interest compounding for each deposit period
-            for (let j = 0; j < depositFreq; j++) {
+            for (let j = 0; j < depositFrequency; j++) {
                 if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
                     totalAmount += depositAmount;
                     if (depositFrequency > 0) {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             // Apply withdrawals and interest compounding for each withdrawal period
-            for (let k = 0; k < withdrawalFreq; k++) {
+            for (let k = 0; k < withdrawalFrequency; k++) {
                 if (withdrawalFrequency > 0) { // Ensure withdrawalFreq is valid
                     totalAmount *= (1 + annualinterestRate / withdrawalFrequency);
                 }
