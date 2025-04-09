@@ -38,7 +38,7 @@ investmentForm.addEventListener("submit", function(event) {
                 }
             }
 )
-)
+
         // Apply withdrawals and interest compounding for each withdrawal period
                     for (let k = 0; k < withdrawalFreq; k++) {
             if (withdrawalAmount > 0 && totalAmount >= withdrawalAmount) { // Ensure withdrawal does not exceed total amount
@@ -121,5 +121,6 @@ investmentForm.addEventListener("submit", function(event) {
                     }
                 }
             }
-        });
-    }
+        }); // Close Chart configuration
+    } // Close updateChart function
+}); // Close DOMContentLoaded event listener
