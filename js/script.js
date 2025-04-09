@@ -58,6 +58,9 @@ investmentForm.addEventListener("submit", function(event) {
         }
 
         // Increase withdrawal amount by annual increase rate
+        if (withdrawalAmount > 0) {
+            withdrawalAmount += withdrawalAmount * withdrawalIncrease;
+        }
     
         // Calculate Compound Annual Growth Rate (CAGR)
         let cagr = 0;
@@ -69,7 +72,7 @@ investmentForm.addEventListener("submit", function(event) {
     document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${totalAmount.toFixed(2)}</span>`;
     document.getElementById('totalContributions').innerHTML = `Total Contributions: <span class="black">£${totalContributions.toFixed(2)}</span>`;
     document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
-    document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
+     // Call the function to display chart
     document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(cagr * 100).toFixed(2)}%</span>`;
     
      // Call the functiion to display chart
