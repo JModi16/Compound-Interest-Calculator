@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle form submission
     investmentForm.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent form submission
+        console.log("Form submitted!"); // Debugging message
 
         // Get user inputs
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
