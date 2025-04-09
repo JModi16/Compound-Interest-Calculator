@@ -34,10 +34,13 @@ investmentForm.addEventListener("submit", function(event) {
                 totalAmount += depositAmount;
                 totalAmount *= (1 + annualinterestRate / (depositFreq * years));
                 }
-            });
-        }
+            }
+                }
+            }
+)
+)
         // Apply withdrawals and interest compounding for each withdrawal period
-        for (let k = 0; k < withdrawalFreq; k++) {
+                    for (let k = 0; k < withdrawalFreq; k++) {
             if (withdrawalAmount > 0 && totalAmount >= withdrawalAmount) { // Ensure withdrawal does not exceed total amount
                 totalAmount -= withdrawalAmount;
                 totalAmount *= (1 + annualinterestRate / (withdrawalFreq * years));
@@ -53,24 +56,7 @@ investmentForm.addEventListener("submit", function(event) {
         if (depositAmount > 0) {
             depositAmount += depositAmount * annualIncrease;
         }
-    }
-        // Apply withdrawals and interest compounding for each withdrawal period
-            for (let k = 0; k < withdrawalFreq; k++) {
-                if (withdrawalAmount > 0 && totalAmount >= withdrawalAmount) { // Ensure withdrawal does not exceed total amount
-                    totalAmount -= withdrawalAmount;
-                    totalAmount *= (1 + annualinterestRate / withdrawalFreq);
-                } else if (totalAmount < withdrawalAmount) {
-                    break; // Stop further withdrawals if totalAmount is insufficient
-                }
-            }
-          // Update total contributions and withdrawals
-          totalContributions += depositAmount * depositFreq;
-          totalWithdrawals += withdrawalAmount * withdrawalFreq;
 
-            // Increase deposit amount by annual increase rate
-            if (depositAmount > 0) {
-                depositAmount += depositAmount * annualIncrease;
-            }
         // Increase withdrawal amount by annual increase rate
     
         // Calculate Compound Annual Growth Rate (CAGR)
