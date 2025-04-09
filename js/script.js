@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let annualIncrease = parseFloat(document.getElementById("annualIncrease").value) || 0;
 
         let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
-        let withdrawalFreq = parseInt(document.getElementById("withdrawalFrequency").value) || 0;
+        let withdrawalFreq = parseInt(document.getElementById("withdrawalFrequency").value) || 1; // Default to 1 to avoid division by zero
 
         // Initialize total values
         let totalAmount = initialInvestment;
@@ -30,7 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
             for (let j = 0; j < depositFreq; j++) {
                 if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
                     totalAmount += depositAmount;
-                    totalAmount *= (1 + annualinterestRate / depositFreq);
+                    if (depositFreq > 0) {
+                        totalAmount *= (1 + annualinterestRate / depositFreq);
+                    }
                 }
             }
 
