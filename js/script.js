@@ -32,7 +32,7 @@ investmentForm.addEventListener("submit", function(event) {
         for (let j = 0; j < depositFreq; j++) {
             if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
                 totalAmount += depositAmount;
-                totalAmount *= (1 + annualinterestRate / (depositFreq * years));
+                totalAmount *= (1 + annualinterestRate / depositFreq);
                 }
             }
                 }
