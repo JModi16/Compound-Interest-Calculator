@@ -76,8 +76,11 @@ investmentForm.addEventListener("submit", function(event) {
     document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(cagr * 100).toFixed(2)}%</span>`;
     
      // Call the functiion to display chart
-     updateChart(totalAmount, totalContributions, totalWithdrawals, totalAmount - initialInvestment -totalContributions + totalWithdrawals, 
-        cagr);
+    // Calculate total interest
+    let totalInterest = totalAmount - initialInvestment - totalContributions + totalWithdrawals;
+
+    // Call the function to display chart
+    updateChart(totalAmount, totalContributions, totalWithdrawals, totalInterest, cagr);
 
     // Function to update the chart
     function updateChart(futureValue, totalContributions, totalWithdrawals, totalInterest, cagr) {
