@@ -10,15 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // Get user inputs
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
         let annualinterestRate = (parseFloat(document.getElementById("interest-rate").value) || 0) / 100;
-        const compoundFreq = parseInt(document.getElementById("compoundfrequency").value) || 1; // Default to 1 to avoid division by zero
+        const compoundfrequency = parseInt(document.getElementById("compoundfrequency").value) || 1; // Default to 1 to avoid division by zero
         let years = parseInt(document.getElementById("years").value) || 0;
 
         let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
-        let depositFreq = parseInt(document.getElementById("depositFrequency").value) || 1; // Default to 1 to avoid division by zero
+        let depositFrequency = parseInt(document.getElementById("depositFrequency").value) || 1; // Default to 1 to avoid division by zero
         let annualIncrease = parseFloat(document.getElementById("annualIncrease").value) || 0;
 
         let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
-        let withdrawalFreq = parseInt(document.getElementById("withdrawalFrequency").value) || 1; // Default to 1 to avoid division by zero
+        let withdrawalFrequency = parseInt(document.getElementById("withdrawalFrequency").value) || 1; // Default to 1 to avoid division by zero
 
         // Initialize total values
         let totalAmount = initialInvestment;
@@ -31,16 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
             for (let j = 0; j < depositFreq; j++) {
                 if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
                     totalAmount += depositAmount;
-                    if (depositFreq > 0) {
-                        totalAmount *= (1 + annualinterestRate / depositFreq);
+                    if (depositFrequency > 0) {
+                        totalAmount *= (1 + annualinterestRate / depositFrequency);
                     }
                 }
             }
 
             // Apply withdrawals and interest compounding for each withdrawal period
             for (let k = 0; k < withdrawalFreq; k++) {
-                if (withdrawalFreq > 0) { // Ensure withdrawalFreq is valid
-                    totalAmount *= (1 + annualinterestRate / withdrawalFreq);
+                if (withdrawalFrequency > 0) { // Ensure withdrawalFreq is valid
+                    totalAmount *= (1 + annualinterestRate / withdrawalFrequency);
                 }
                 totalAmount -= withdrawalAmount;
                 if (totalAmount < withdrawalAmount) {
@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             // Update total contributions and withdrawals
-            totalContributions += depositAmount * depositFreq;
-            totalWithdrawals += withdrawalAmount * withdrawalFreq;
+            totalContributions += depositAmount * depositFrequency;
+            totalWithdrawals += withdrawalAmount * withdrawalFrequency;
 
             // Increase deposit amount by annual increase rate
             if (depositAmount > 0) {
