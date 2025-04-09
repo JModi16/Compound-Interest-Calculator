@@ -38,12 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Apply withdrawals and interest compounding for each withdrawal period
             for (let k = 0; k < withdrawalFreq; k++) {
-                    if (withdrawalFreq > 0) { // Ensure withdrawalFreq is valid
-                        totalAmount *= (1 + annualinterestRate / withdrawalFreq);
-                    }
-                    totalAmount -= withdrawalAmount;
+                if (withdrawalFreq > 0) { // Ensure withdrawalFreq is valid
                     totalAmount *= (1 + annualinterestRate / withdrawalFreq);
-                } else if (totalAmount < withdrawalAmount) {
+                }
+                totalAmount -= withdrawalAmount;
+                if (totalAmount < withdrawalAmount) {
                     break; // Stop further withdrawals if totalAmount is insufficient
                 }
             }
@@ -64,10 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Calculate Compound Annual Growth Rate (CAGR)
-        let cagr = 0;
-        if (initialInvestment > 0) {
-            cagr = Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
+    
+        if  (years > 0 )  {
+          cagr = Math.pow((totalAmount / initialInvestment), (1 / years)) - 1;
+        }  else {
+            cagr = 0; // set CAGR to 0 if years is 0 to avoid division by zero
         }
+        
 
         // Display the results
         document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${totalAmount.toFixed(2)}</span>`;
