@@ -72,15 +72,12 @@ investmentForm.addEventListener("submit", function(event) {
     document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${totalAmount.toFixed(2)}</span>`;
     document.getElementById('totalContributions').innerHTML = `Total Contributions: <span class="black">£${totalContributions.toFixed(2)}</span>`;
     document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
-     // Call the function to display chart
+    document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
     document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(cagr * 100).toFixed(2)}%</span>`;
     
      // Call the functiion to display chart
-    // Calculate total interest
-    let totalInterest = totalAmount - initialInvestment - totalContributions + totalWithdrawals;
-
-    // Call the function to display chart
-    updateChart(totalAmount, totalContributions, totalWithdrawals, totalInterest, cagr);
+     updateChart(totalAmount, totalContributions, totalWithdrawals, totalAmount - initialInvestment -totalContributions + totalWithdrawals, 
+        cagr);
 
     // Function to update the chart
     function updateChart(futureValue, totalContributions, totalWithdrawals, totalInterest, cagr) {
