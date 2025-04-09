@@ -43,7 +43,7 @@ investmentForm.addEventListener("submit", function(event) {
                     for (let k = 0; k < withdrawalFreq; k++) {
             if (withdrawalAmount > 0 && totalAmount >= withdrawalAmount) { // Ensure withdrawal does not exceed total amount
                 totalAmount -= withdrawalAmount;
-                totalAmount *= (1 + annualinterestRate / (withdrawalFreq * years));
+                totalAmount *= (1 + annualinterestRate / withdrawalFreq);
             } else if (totalAmount < withdrawalAmount) {
                 break; // Stop further withdrawals if totalAmount is insufficient
             }
