@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let years = parseInt(document.getElementById("years").value) || 0;
 
         let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
-        let depositFreq = parseInt(document.getElementById("depositFrequency").value) || 0;
+        let depositFreq = parseInt(document.getElementById("depositFrequency").value) || 1; // Default to 1 to avoid division by zero
         let annualIncrease = parseFloat(document.getElementById("annualIncrease").value) || 0;
 
         let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
