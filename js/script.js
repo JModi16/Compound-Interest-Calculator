@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Apply withdrawals and interest compounding for each withdrawal period
             for (let k = 0; k < withdrawalFreq; k++) {
-                if (withdrawalAmount > 0 && totalAmount >= withdrawalAmount) { // Ensure withdrawal does not exceed total amount
+                    if (withdrawalFreq > 0) { // Ensure withdrawalFreq is valid
+                        totalAmount *= (1 + annualinterestRate / withdrawalFreq);
+                    }
                     totalAmount -= withdrawalAmount;
                     totalAmount *= (1 + annualinterestRate / withdrawalFreq);
                 } else if (totalAmount < withdrawalAmount) {
