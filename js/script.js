@@ -36,12 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
             
             // Apply withdrawals and interest compounding for each withdrawal period
             for (let k = 0; k < withdrawalFrequency; k++) {
-                if (withdrawalFrequency > 0) { // Ensure withdrawalFreq is valid
-                    totalAmount *= (1 + annualinterestRate / compoundfrequency);
-                }
-                totalAmount -= withdrawalAmount;
-                if (totalAmount < withdrawalAmount) {
-                    break; // Stop further withdrawals if totalAmount is insufficient
+                if (withdrawalAmount > 0) { // Only apply if withdrawal amount is greater than 0
+                    if (totalAmount >= withdrawalAmount) {
+                        totalAmount -= withdrawalAmount; //Subtract withdrawl
+                    totalWithdrawals += withdrawalAmount; //Track total withdrawals
+                    } else {
+                        break; // stop withdrawls if not enough funds
+                    }
                 }
             }
 
