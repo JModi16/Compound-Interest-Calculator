@@ -46,10 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            // Update total contributions and withdrawals
-            totalContributions += depositAmount * depositFrequency;
-            totalWithdrawals += withdrawalAmount * withdrawalFrequency;
-
             // Calculate Compound Annual Growth Rate (CAGR)
             let cagr;
             if (years > 0) {
