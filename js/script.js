@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (inputElement) {
                 const inputValue = inputElement.value; // Get the value of the input field
-                console.log("Input element not found."); // Debugging message
+                console.log("Input value:", inputValue); // Debugging message
+            } else {
+                console.error("Input element not found."); // Debugging message
             }
     });
   } else {
