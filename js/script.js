@@ -51,17 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
             totalContributions += depositAmount * depositFrequency;
             totalWithdrawals += withdrawalAmount * withdrawalFrequency;
 
-            // Increase deposit amount by annual increase rate
-            if (depositAmount > 0) {
-                depositAmount += depositAmount * annualIncrease;
-            }
-
-            // Increase withdrawal amount by annual increase rate
-            if (withdrawalAmount > 0) {
-                withdrawalAmount += withdrawalAmount * annualIncrease;
-            }
-        }
-
         // Calculate Compound Annual Growth Rate (CAGR)
     
         if  (years > 0 )  {
