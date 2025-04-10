@@ -39,8 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (withdrawalAmount > 0) { // Only apply if withdrawal amount is greater than 0
                     if (totalAmount >= withdrawalAmount) {
                         totalAmount -= withdrawalAmount; //Subtract withdrawl
-                    totalWithdrawals += withdrawalAmount; //Track total withdrawals
+                        totalWithdrawals += withdrawalAmount; //Track total withdrawals
                     } else {
+                        console.error("Not enough funds available to process withdrawal."); // Log error
+                        alert("Not enough funds available to process withdrawal. Stopping calculation."); // Notify user
                         break; // stop withdrawls if not enough funds
                     }
                 }
@@ -63,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Display the results
             document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${totalAmount.toFixed(2)}</span>`;
             document.getElementById('totalContributions').innerHTML = `Total Contributions: <span class="black">£${totalContributions.toFixed(2)}</span>`;
-            document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
+            document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFix"ed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(cagr * 100).toFixed(2)}%</span>`;
         
