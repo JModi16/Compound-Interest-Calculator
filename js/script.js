@@ -46,6 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
+            //Apply interest compounding for each year
+            for (let m = 0; m < compoundfrequency; m++) {
+                totalAmount *= (1 + annualinterestRate / compoundfrequency); //Compound Interest
+            }
+
+        }
+
             // Calculate Compound Annual Growth Rate (CAGR)
             let cagr;
             if (years > 0) {
