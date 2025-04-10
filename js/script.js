@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Get the form element
-    let investmentForm = document.getElementById("CompoundInterestForm");
+    const form = document.getElementById("CompoundInterestForm");// Replace with actual form ID
+
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission for demonstration
+
+            
+        
+    }
 
     // Handle form submission
     investmentForm.addEventListener("submit", function (event) {
@@ -10,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Get user inputs
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
         let annualinterestRate = (parseFloat(document.getElementById("interest-rate").value) || 0) / 100;
-        let compoundFrequency = parseInt(document.getElementById("compoundfrequency").value) || 1; // Default to 1 to avoid division by zero
+        const compoundfrequency = parseInt(document.getElementById("compoundfrequency").value) || 1; // Default to 1 to avoid division by zero
         let years = parseInt(document.getElementById("years").value) || 0;
 
         let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
@@ -31,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
                     totalAmount += depositAmount;
                     if (depositFrequency > 0) {
-                        totalAmount *= (1 + annualinterestRate / compoundFrequency);
-                        });
+                        totalAmount *= (1 + annualinterestRate / depositFrequency);
+                        }
                     
                 }
             }
@@ -40,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Apply withdrawals and interest compounding for each withdrawal period
             for (let k = 0; k < withdrawalFrequency; k++) {
                 if (withdrawalFrequency > 0) { // Ensure withdrawalFreq is valid
-                    totalAmount *= (1 + annualinterestRate / compoundFrequency);
+                    totalAmount *= (1 + annualinterestRate / withdrawalFrequency);
                 }
                 totalAmount -= withdrawalAmount;
                 if (totalAmount < withdrawalAmount) {
