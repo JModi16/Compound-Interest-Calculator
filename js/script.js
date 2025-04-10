@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             totalWithdrawals += withdrawalAmount * withdrawalFrequency;
 
             // Calculate Compound Annual Growth Rate (CAGR)
+            let cagr;
             if (years > 0) {
                 cagr = Math.pow((totalAmount / initialInvestment), (1 / years)) - 1;
             } else {
