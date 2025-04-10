@@ -50,13 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
             for (let m = 0; m < compoundfrequency; m++) {
                 totalAmount *= (1 + annualinterestRate / compoundfrequency); //Compound Interest
             }
-
-        }
+    }
 
             // Calculate Compound Annual Growth Rate (CAGR)
             let cagr;
-            if (years > 0) {
-                cagr = Math.pow((totalAmount / initialInvestment), (1 / years)) - 1;
+            if (years > 0 && initialInvestment > 0) {
+                cagr = Math.pow((totalAmount / initialInvestment + totalContributions - totalWithdrawals), (1 / years)) - 1;
             } else {
                 cagr = 0; // set CAGR to 0 if years is 0 to avoid division by zero
             }
