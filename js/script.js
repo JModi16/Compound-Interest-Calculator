@@ -30,12 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
             for (let j = 0; j < depositFrequency; j++) {
                 if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
                     totalAmount += depositAmount;
-                    if (depositFrequency > 0) {
-                        totalAmount *= (1 + annualinterestRate / compoundfrequency);
+                    totalContributions += depositAmount; //Track total contributions
                     }
                 }
-            }
-
+            
             // Apply withdrawals and interest compounding for each withdrawal period
             for (let k = 0; k < withdrawalFrequency; k++) {
                 if (withdrawalFrequency > 0) { // Ensure withdrawalFreq is valid
