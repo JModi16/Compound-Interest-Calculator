@@ -7,25 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault(); // Prevent form submission for demonstration
             console.log("Form submitted!"); // Debugging message
 
-            const inputElement = document.getElementById("initialInvestment"); // Replace with actual input ID
-
-            if (inputElement) {
-                const inputValue = inputElement.value; // Get the value of the input field
-                console.log("Input value:", inputValue); // Debugging message
-            } else {
-                console.error("Input element not found."); // Debugging message
-            }
-        });
-    } else {
-        console.error("Form element not found."); // Debugging message
-    }
-});
-
-    // Handle form submission
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form submission
-        console.log("Form submitted!"); // Debugging message
-
         // Get user inputs
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
         let annualinterestRate = (parseFloat(document.getElementById("interest-rate").value) || 0) / 100;
