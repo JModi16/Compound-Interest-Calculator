@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Calculate Compound Annual Growth Rate (CAGR)
             let cagr;
             if (years > 0 && (initialInvestment + totalContributions - totalWithdrawals) > 0) {
-                cagr = Math.pow((totalAmount / initialInvestment + totalContributions - totalWithdrawals), (1 / years)) - 1;
+                cagr = Math.pow(totalAmount / initialInvestment + totalContributions - totalWithdrawals), (1 / years) - 1;
             } else {
                 cagr = 0; // set CAGR to 0 if years is 0 to avoid division by zero
             }
@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(cagr * 100).toFixed(2)}%</span>`;
-        
     });
 } else {
     console.error("Form element not found."); // Debugging message
