@@ -6,9 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission for demonstration
 
-            
-        
-    }
+            const inputElement = document.getElementById("initialInvestment"); // Replace with actual input ID
+
+            if (inputElement) {
+                const inputValue = inputElement.value; // Get the value of the input field
+                console.log("Input element not found."); // Debugging message
+            }
+    });
+  } else {
+    console.error("Form not found.");
+  }
+});
+
 
     // Handle form submission
     investmentForm.addEventListener("submit", function (event) {
