@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Input value:", inputValue); // Debugging message
             } else {
                 console.error("Input element not found."); // Debugging message
-            }
-    });
-  } else {
-    console.error("Form not found.");
-  }
+                }
+            });
+    } else {
+        console.error("Form not found.");
+    }
 });
 
 
