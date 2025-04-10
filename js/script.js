@@ -66,5 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(cagr * 100).toFixed(2)}%</span>`;
         }
-    }
+    });
+} else {
+    console.error("Form element not found."); // Debugging message
+}
 });
