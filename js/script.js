@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (form) {
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission for demonstration
-            console.log("Form submitted!"); // Debugging message
+            
 
-        // Get user inputs
+        // Get user input values
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
         let annualinterestRate = (parseFloat(document.getElementById("interest-rate").value) || 0) / 100;
         let compoundfrequency = parseInt(document.getElementById("compoundfrequency").value) || 1; // Default to 1 to avoid division by zero
