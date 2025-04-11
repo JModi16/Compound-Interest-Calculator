@@ -48,8 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
         let totalWithdrawals = 0;
 
          // Clear previous table rows
-         const resultsTableBody = document.querySelector("#resultsTable tbody");
-         resultsTableBody.innerHTML = "";
+         const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
+            if (resultsTableBody) {
+                resultsTableBody.innerHTML = ""; // Clear previous rows
+        } else {
+            console.error("The results table body element is missing in the DOM.");
+            return; // Stop further execution
+        }
 
           // Loop through each year to calculate future values
           for (let i = 0; i < years; i++) {
