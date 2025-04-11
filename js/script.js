@@ -106,10 +106,11 @@ document.addEventListener("DOMContentLoaded", function () {
     row.innerHTML = `
         <tr>
             <td>${i + 1}</td>
-            <td>£${yearDeposits.toFixed(2)}</td>
-            <td>£${yearWithdrawals.toFixed(2)}</td>
-            <td>£${yearInterest.toFixed(2)}</td>
             <td>£${totalAmount.toFixed(2)}</td>
+            <td>£${yearInterest.toFixed(2)}</td>
+            <td>£${totalContributions.toFixed(2)}</td>
+            <td>£${totalWithdrawals.toFixed(2)}</td>
+            <td>${(cagr * 100).toFixed(2)}%</td>
         </tr>
     `;
         resultsTableBody.appendChild(row);
