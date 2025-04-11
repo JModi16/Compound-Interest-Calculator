@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
          const resultsTableBody = document.querySelector("#resultsTable tbody");
          resultsTableBody.innerHTML = "";
 
-        // Loop through each year to calculate future values
-        for (let i = 0; i < years; i++) {
+          // Loop through each year to calculate future values
+          for (let i = 0; i < years; i++) {
             let yearDeposits = 0;
-            let yearWithdrawls = 0;
+            let yearWithdrawals = 0;
             let yearInterest = 0;
 
             // Apply deposits and interest compounding for each deposit period
