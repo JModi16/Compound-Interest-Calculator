@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
      yearInterest = totalAmount - yearStartAmount;
 
       // Calculate Compound Annual Growth Rate (CAGR)
-      let cagr;
+      let cagr = 0;
       if (i > 0 && (initialInvestment + totalContributions - totalWithdrawals) > 0) {
           cagr = Math.pow(totalAmount / (initialInvestment + totalContributions - totalWithdrawals), 1 / (i + 1)) - 1;
       } else {
