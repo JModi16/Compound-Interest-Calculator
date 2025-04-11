@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Number of years must be greater than 0.");
             return; // Stop further execution
         }
-
+        console.log("Form submitted!"); // Debugging message
+        
         // Initialize total values
         let totalAmount = initialInvestment;
         let totalContributions = 0;
