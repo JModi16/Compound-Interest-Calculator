@@ -26,7 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
             return; // Stop further execution
         }
 
-        
+        if (initialInvestment <= 0) {
+            alert("Initial Investment must be greater than 0.");
+            return; // Stop further execution
+        }
+
+        if (annualinterestRate <= 0) {
+            alert("Interest rate must be greater than 0.");
+            return; // Stop further execution
+
+
         // Initialize total values
         let totalAmount = initialInvestment;
         let totalContributions = 0;
