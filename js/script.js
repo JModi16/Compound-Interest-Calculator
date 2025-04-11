@@ -115,11 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
         resultsTableBody.appendChild(row);
         }
-
-
-           
-
-            
         
             // Display the results
             document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${totalAmount.toFixed(2)}</span>`;
