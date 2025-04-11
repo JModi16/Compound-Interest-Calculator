@@ -86,7 +86,21 @@ document.addEventListener("DOMContentLoaded", function () {
             for (let m = 0; m < compoundfrequency; m++) {
                 totalAmount *= (1 + annualinterestRate / compoundfrequency); //Compound Interest
             }
-    }       yearInterest = totalAmount - yearStartAmount;
+     yearInterest = totalAmount - yearStartAmount;
+
+    // Add a row to the table
+    const row = document.createElement("tr");
+    row.innerHTML = `
+        <tr>
+            <td>${i + 1}</td>
+            <td>£${yearDeposits.toFixed(2)}</td>
+            <td>£${yearWithdrawals.toFixed(2)}</td>
+            <td>£${yearInterest.toFixed(2)}</td>
+            <td>£${totalAmount.toFixed(2)}</td>
+        </tr>
+    `;
+        resultsTableBody.appendChild(row);
+        }
 
 
             // Calculate Compound Annual Growth Rate (CAGR)
@@ -96,6 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 cagr = 0; // set CAGR to 0 if years is 0 to avoid division by zero
             }
+
+            
         
             // Display the results
             document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${totalAmount.toFixed(2)}</span>`;
