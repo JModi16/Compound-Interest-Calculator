@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
         let withdrawalFrequency = parseInt(document.getElementById("withdrawalFrequency").value) || 1; // Default to 1 to avoid division by zero
 
+        // Validate compoundfrequency
+        if (compoundfrequency <= 0) {
+            alert("Compounding frequency must be greater than 0.");
+            console.error("Invalid compounding frequency: " + compoundfrequency); // Log error for debugging
+            return; // Stop further execution
+        }
+
+        
         // Initialize total values
         let totalAmount = initialInvestment;
         let totalContributions = 0;
