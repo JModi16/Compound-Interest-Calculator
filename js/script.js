@@ -34,7 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (annualinterestRate <= 0) {
             alert("Interest rate must be greater than 0.");
             return; // Stop further execution
+        }
 
+        if (years <= 0) {
+            alert("Number of years must be greater than 0.");
+            return; // Stop further execution
+        }
 
         // Initialize total values
         let totalAmount = initialInvestment;
