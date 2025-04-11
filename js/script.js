@@ -41,14 +41,22 @@ document.addEventListener("DOMContentLoaded", function () {
             return; // Stop further execution
         }
         console.log("Form submitted!"); // Debugging message
-        
+
         // Initialize total values
         let totalAmount = initialInvestment;
         let totalContributions = 0;
         let totalWithdrawals = 0;
 
+         // Clear previous table rows
+         const resultsTableBody = document.querySelector("#resultsTable tbody");
+         resultsTableBody.innerHTML = "";
+
         // Loop through each year to calculate future values
         for (let i = 0; i < years; i++) {
+            let yearDeposits = 0;
+            let yearWithdrawls = 0;
+            let yearInterest = 0;
+
             // Apply deposits and interest compounding for each deposit period
             for (let j = 0; j < depositFrequency; j++) {
                 if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
