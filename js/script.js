@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
                     totalAmount += depositAmount;
                     totalContributions += depositAmount; //Track total contributions
+                    yearDeposits += depositAmount;
                     }
                 }
             
@@ -71,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (totalAmount >= withdrawalAmount) {
                         totalAmount -= withdrawalAmount; //Subtract withdrawl
                         totalWithdrawals += withdrawalAmount; //Track total withdrawals
+                        yearWithdrawals += withdrawalAmount;
                     } else {
                         console.error("Not enough funds available to process withdrawal."); // Log error
                         alert("Not enough funds available to process withdrawal. Stopping calculation."); // Notify user
