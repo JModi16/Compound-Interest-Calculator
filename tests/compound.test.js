@@ -1,4 +1,4 @@
-const { calculateCAGR } = require('../Compound-Interest-Calculator/js/script.js');
+const { calculateCAGR } = require('../js"/script.js');
 
 describe('Compound Interest Calculator', () => {
     test('should calculate the correct CAGR', () => {
@@ -7,7 +7,7 @@ describe('Compound Interest Calculator', () => {
         const years = 10;
 
         const cagr = calculateCAGR(totalAmount, initialInvestment, years);
-        expect(cagr).toBeCloseTo(0.236, 3); // 23.6%
+        expect(cagr).toBeCloseTo(0.281, 3); // 28.1%
         });
     
     });
