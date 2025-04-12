@@ -138,3 +138,17 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Form element not found."); // Debugging message
 }
 });
+
+// Existing DOMContentLoaded logic
+document.addEventListener("DOMContentLoaded", function () {
+    // ...existing code...
+});
+
+// Define the calculateCAGR function
+function calculateCAGR(totalAmount, initialInvestment, years) {
+    if (years === 0) return 0; // Avoid division by zero
+    return Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
+}
+
+// Export the function for testing
+module.exports = { calculateCAGR };
