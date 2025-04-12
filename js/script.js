@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let totalAmount = initialInvestment;
         let totalContributions = 0;
         let totalWithdrawals = 0;
+        let finalCagr = 0; // Declare finalCagr outside the loop
 
          // Clear previous table rows
          const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
@@ -110,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>£${yearInterest.toFixed(2)}</td>
             <td>£${totalContributions.toFixed(2)}</td>
             <td>£${totalWithdrawals.toFixed(2)}</td>
-            <td>${(cagr * 100).toFixed(2)}%</td>
+            <td>${(finalCagr * 100).toFixed(2)}%</td>
         </tr>
     `;
         resultsTableBody.appendChild(row);
