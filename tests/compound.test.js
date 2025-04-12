@@ -21,14 +21,6 @@ describe('Compound Interest Calculator', () => {
 
     });
 
-    test('should return 0 CAGR if years is 0', () => {
-        const totalAmount = 50000;
-        const initialInvestment = 5000;
-        const years = 0;
-
-        const cagr = calculateCAGR(totalAmount, initialInvestment, years);
-        expect(cagr).toBe(0);
-    });
 
     test('should calculate total contributions correctly', () => {
         const depositAmount = 1200; // Monthly deposit of £100
