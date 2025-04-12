@@ -21,7 +21,17 @@ describe('Compound Interest Calculator', () => {
 
     });
 
+    test('should calculate correct future value with deposits and withdrawls', () => {
+        const initialInvestment = 10400; // Initial investment of £10,000
+        const annualInterestRate = 0.04; // 5%
+        const depositAmount = 1000; // Monthly deposit of £1,000
+        const withdrawalAmount = 120; // Monthly withdrawal of £150
+        const years = 5;
+        const compoundFrequency = 12; // Monthly
 
+        const futureValue = calculateFutureValue(initialInvestment, annualInterestRate, depositAmount, withdrawalAmount, years, compoundFrequency);
+        expect(futureValue).toBeCloseTo(104000.00, 2); // Expected future value: ~£104,000.00
+    }
     test('should calculate total contributions correctly', () => {
         const depositAmount = 1000; // Monthly deposit of £1000
         const depositFrequency = 12; // Monthly
