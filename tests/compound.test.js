@@ -1,4 +1,4 @@
-const { calculateCAGR } = require('../js"/script.js');
+const { calculateCAGR } = require('../js/script.js');
 
 describe('Compound Interest Calculator', () => {
     test('should calculate the correct CAGR', () => {
@@ -45,7 +45,7 @@ describe('Compound Interest Calculator', () => {
     
         expect(futureValue).toBeCloseTo(72137.00, 2); // Expected future value: ~£72,137.00
     });
-    
+
     test('should calculate total contributions correctly', () => {
         const depositAmount = 1000; // Monthly deposit of £1000
         const depositFrequency = 12; // Monthly
