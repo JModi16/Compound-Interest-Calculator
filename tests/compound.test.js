@@ -32,3 +32,7 @@ describe('Compound Interest Calculator', () => {
         const depositAmount = 100;
         const depositFrequency = 12; // Monthly
         const years = 5;
+
+        const totalContributions = depositAmount * depositFrequency * years;
+        expect(totalContributions).toBe(6000); // Expected total contributions: £6,000
+    });
