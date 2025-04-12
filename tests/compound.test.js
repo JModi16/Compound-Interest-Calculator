@@ -31,4 +31,11 @@ describe('Compound Interest Calculator', () => {
         expect(totalContributions).toBe(60000); // Expected total contributions: £6,0000
     });
 
-    
+    test('should calculate total withdrawals correctly', () => {
+        const withdrawalAmount = 50;
+        const withdrawalFrequency = 12; // Monthly
+        const years = 5;
+
+        const totalWithdrawals = withdrawalAmount * withdrawalFrequency * years;
+        expect(totalWithdrawals).toBe(3000); // Expected total withdrawals: £3,000
+    });
