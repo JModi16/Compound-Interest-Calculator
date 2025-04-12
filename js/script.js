@@ -95,12 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
      yearInterest = totalAmount - yearStartAmount;
 
       // Calculate Compound Annual Growth Rate (CAGR)
-      let finalCagr = 0;
-      if (years > 0 && initialInvestment > 0) {
-          finalCagr = Math.pow(totalAmount / initialInvestment, 1 / years) -1;
-      } else {
-          finalCagr = 0; // set CAGR to 0 if years is 0 to avoid division by zero
-      }
+      let cagr = 0;
+      if (yearStartAmount > 0) {
+        cagr = Math.pow(totalAmount / yearStartAmount, 1 / 1) - 1; // Annual growth rate
+    }
 
     // Add a row to the table
     const row = document.createElement("tr");
@@ -111,12 +109,18 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>£${yearInterest.toFixed(2)}</td>
             <td>£${totalContributions.toFixed(2)}</td>
             <td>£${totalWithdrawals.toFixed(2)}</td>
-            <td>${(finalCagr * 100).toFixed(2)}%</td>
+            <td>${(cagr * 100).toFixed(2)}%</td>
         </tr>
     `;
         resultsTableBody.appendChild(row);
         }
         
+         // Calculate Final CAGR
+         if (years > 0 && initialInvestment > 0) {
+            finalCagr = Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
+        } else {
+            finalCagr = 0; // Set CAGR to 0 if the denominator is invalid
+        }
             // Display the results
             document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${totalAmount.toFixed(2)}</span>`;
             document.getElementById('totalContributions').innerHTML = `Total Contributions: <span class="black">£${totalContributions.toFixed(2)}</span>`;
