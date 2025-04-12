@@ -6,6 +6,8 @@ describe('Compound Interest Calculator', () => {
 
         const cagr =calculateCAGR(totalAmount, initialInvestment, years);
         expect(cagr).toBeCloseTo(0.236, 3); // 23.6%
+        });
+    
     });
     test('should return 0 CAGR if year is 0', () => {
         const totalAmount = 260000;
@@ -16,3 +18,10 @@ describe('Compound Interest Calculator', () => {
         expect(cagr).toBe(0); // 0%
 
     });
+
+    test('should return 0 CAGR if years is 0', () => {
+        const totalAmount = 50000;
+        const initialInvestment = 5000;
+        const years = 0;
+
+        
