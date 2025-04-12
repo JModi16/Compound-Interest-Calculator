@@ -19,6 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
         let withdrawalFrequency = parseInt(document.getElementById("withdrawalFrequency").value) || 1; // Default to 1 to avoid division by zero
 
+        // Validate inputs
+        if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
+            alert("Please ensure all inputs are valid and greater than 0.");
+            return;
+        }
+        
         // Validate compoundfrequency
         if (compoundfrequency <= 0) {
             alert("Compounding frequency must be greater than 0.");
