@@ -74,3 +74,5 @@ describe('Compound Interest Calculator', () => {
         const yearlyInterest = calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency);
         expect(yearlyInterest).toBeCloseTo(511.62, 2); // Expected yearly interest: ~£511.62
     });
+
+    const { calculateCAGR, calculateFutureValue } = require('../js/script.js');

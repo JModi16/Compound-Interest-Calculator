@@ -166,7 +166,7 @@ function calculateFutureValue(
     // Add deposits and subtract withdrawals over time
     return futureValue;
 }
-
+module.exports = { calculateCAGR, calculateFutureValue };
 
 // Export the function for testing
 module.exports = { calculateCAGR };
