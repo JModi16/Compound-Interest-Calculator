@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
             alert("Please ensure all inputs are valid and greater than 0.");
             return;
-        }
         
         // Validate compoundfrequency
         if (compoundfrequency <= 0) {
@@ -193,29 +192,7 @@ function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFr
 
 module.exports = { calculateCAGR, calculateFutureValue, calculateYearlyInterest };
 
-           
+       
 
-        // Apply withdrawals and interest compounding for each withdrawal period
-        for (let k = 0; k < withdrawalFrequency; k++) {
-            if (withdrawalAmount > 0) { // Only apply if withdrawal amount is greater than 0
-                if (totalAmount >= withdrawalAmount) {
-                    totalAmount -= withdrawalAmount; //Subtract withdrawl
-                    totalWithdrawals += withdrawalAmount; //Track total withdrawals
-                } else {
-                    console.error("Not enough funds available to process withdrawal."); // Log error
-                    alert("Not enough funds available to process withdrawal. Stopping calculation."); // Notify user
-                    break; // stop withdrawls if not enough funds
-                }
-            }
-        }
-
-        //Apply interest compounding for each year
-        for (let m = 0; m < compoundFrequency; m++) {
-            totalAmount *= (1 + annualInterestRate / compoundFrequency); //Compound Interest
-        }
-    }
-
-    return totalAmount;
-}
    
 
