@@ -160,14 +160,62 @@ function calculateFutureValue(
     withdrawalAmount,
     withdrawalFrequency
 ) {
-    // Implement the logic for future value calculation
-    // Placeholder logic for now:
-    let futureValue = initialInvestment;
-    // Add deposits and subtract withdrawals over time
-    return futureValue;
-}
-module.exports = { calculateCAGR, calculateFutureValue };
+    let totalAmount = initialInvestment;
+   
 
-// Export the function for testing
-module.exports = { calculateCAGR };
+    // Loop through each year to calculate future values
+    for (let i = 0; i < years; i++) {
+        // Apply deposits
+        for (let j = 0; j < depositFrequency; j++) {
+            totalAmount += depositAmount;
+            }
+        }
+
+        // Apply withdrawls
+        for (let k = 0; k < withdrawalFrequency; k++) {
+             totalAmount -= withdrawalAmount; 
+        }
+
+        //Apply interest compounding 
+         // Apply interest compounding
+         for (let m = 0; m < compoundFrequency; m++) {
+            totalAmount *= (1 + annualInterestRate / compoundFrequency);
+        }
+    }
+
+    return totalAmount;
+}
+
+
+function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
+    return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
+}
+
+module.exports = { calculateCAGR, calculateFutureValue, calculateYearlyInterest };
+
+           
+
+        // Apply withdrawals and interest compounding for each withdrawal period
+        for (let k = 0; k < withdrawalFrequency; k++) {
+            if (withdrawalAmount > 0) { // Only apply if withdrawal amount is greater than 0
+                if (totalAmount >= withdrawalAmount) {
+                    totalAmount -= withdrawalAmount; //Subtract withdrawl
+                    totalWithdrawals += withdrawalAmount; //Track total withdrawals
+                } else {
+                    console.error("Not enough funds available to process withdrawal."); // Log error
+                    alert("Not enough funds available to process withdrawal. Stopping calculation."); // Notify user
+                    break; // stop withdrawls if not enough funds
+                }
+            }
+        }
+
+        //Apply interest compounding for each year
+        for (let m = 0; m < compoundFrequency; m++) {
+            totalAmount *= (1 + annualInterestRate / compoundFrequency); //Compound Interest
+        }
+    }
+
+    return totalAmount;
+}
+   
 
