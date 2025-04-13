@@ -150,5 +150,17 @@ function calculateCAGR(totalAmount, initialInvestment, years) {
     return Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
 }
 
+function calculateFutureValue(
+    initialInvestment,
+    annualInterestRate,
+    compoundFrequency,
+    years,
+    depositAmount,
+    depositFrequency,
+    withdrawalAmount,
+    withdrawalFrequency
+) {
+
 // Export the function for testing
 module.exports = { calculateCAGR };
+
