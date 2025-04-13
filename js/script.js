@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
             alert("Please ensure all inputs are valid and greater than 0.");
             return;
-        
+        }
+
         // Validate compoundfrequency
         if (compoundfrequency <= 0) {
             alert("Compounding frequency must be greater than 0.");
@@ -132,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(finalCagr * 100).toFixed(2)}%</span>`;
-    });
+    })
 } else {
     console.error("Form element not found."); // Debugging message
 }
@@ -183,7 +184,7 @@ function calculateFutureValue(
     }
 
     return totalAmount;
-}
+
 
 
 function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
