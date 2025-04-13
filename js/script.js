@@ -160,6 +160,13 @@ function calculateFutureValue(
     withdrawalAmount,
     withdrawalFrequency
 ) {
+    // Implement the logic for future value calculation
+    // Placeholder logic for now:
+    let futureValue = initialInvestment;
+    // Add deposits and subtract withdrawals over time
+    return futureValue;
+}
+
 
 // Export the function for testing
 module.exports = { calculateCAGR };
