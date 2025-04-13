@@ -1,4 +1,4 @@
-const { calculateCAGR, calculateFutueValue } = require('../js/script.js');
+const { calculateCAGR, calculateFutureValue } = require('../js/script.js');
 
 describe('Compound Interest Calculator', () => {
     test('should calculate the correct CAGR', () => {

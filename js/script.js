@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
     if (years === 0) return 0; // Avoid division by zero
-    return parseFloat((Math.pow(totalAmount / initialInvestment, 1 / yeears - 1).toFixed(6)); //Ensure precision
+    return parseFloat((Math.pow(totalAmount / initialInvestment, 1 / years) - 1).toFixed(6)); //Ensure precision
 }
 
 function calculateFutureValue(
