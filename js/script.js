@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (form) {
         form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent form submission for demonstration
-            
+            event.preventDefault(); // Prevent form submission for demonstratio
 
         // Get user input values
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
@@ -176,24 +175,20 @@ function calculateFutureValue(
              totalAmount -= withdrawalAmount; 
         }
 
-        //Apply interest compounding 
          // Apply interest compounding
          for (let m = 0; m < compoundFrequency; m++) {
             totalAmount *= (1 + annualInterestRate / compoundFrequency);
         }
     }
 
-    return totalAmount;
+    return totalAmount; // Ensure this is inside the function
 
-
+}
 
 function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
 }
 
-module.exports = { calculateCAGR, calculateFutureValue, calculateYearlyInterest };
 
+module.exports = { calculateCAGR, CalculatefutureValue, calculateYearlyInterest};
        
-
-   
-
