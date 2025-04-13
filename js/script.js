@@ -22,8 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
             alert("Please ensure all inputs are valid and greater than 0.");
             return;
-        }
 
+        }
+            // Initialize total values
+            let totalAmount = initialInvestment;
+            let totalContributions = 0;
+            let totalWithdrawals = 0;
+            let finalCagr = 0;
+        
         // Validate compoundfrequency
         if (compoundfrequency <= 0) {
             alert("Compounding frequency must be greater than 0.");
@@ -136,11 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
 } else {
     console.error("Form element not found."); // Debugging message
 }
-});
-
-// Existing DOMContentLoaded logic
-document.addEventListener("DOMContentLoaded", function () {
-    // ...existing code...
 });
 
 // Define the calculateCAGR function
