@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
             alert("Please ensure all inputs are valid and greater than 0.");
             return;
+        }
 
         // Validate compoundfrequency
         if (compoundfrequency <= 0) {
@@ -138,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
 } else {
     console.error("Form element not found."); // Debugging message
 }
-});
+})
 
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
@@ -180,7 +181,7 @@ function calculateFutureValue(
 
     return totalAmount; // Ensure this is inside the function
 
-}
+
 
 function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
