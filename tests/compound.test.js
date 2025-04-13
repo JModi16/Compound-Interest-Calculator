@@ -1,4 +1,4 @@
-const { calculateCAGR } = require('../js/script.js');
+const { calculateCAGR, calculateFutueValue } = require('../js/script.js');
 
 describe('Compound Interest Calculator', () => {
     test('should calculate the correct CAGR', () => {
@@ -74,5 +74,3 @@ describe('Compound Interest Calculator', () => {
         const yearlyInterest = calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency);
         expect(yearlyInterest).toBeCloseTo(511.62, 2); // Expected yearly interest: ~£511.62
     });
-
-    const { calculateCAGR, calculateFutureValue } = require('../js/script.js');
