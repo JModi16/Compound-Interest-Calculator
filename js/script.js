@@ -179,13 +179,13 @@ function calculateFutureValue(
         }
     }
 
-    return totalAmount; // Ensure this is inside the function
+    return totalAmount;
+    
 
 
-
-function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
+    function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
-}
+    }
 
-module.exports = { calculateCAGR, CalculateFutureValue, calculateYearlyInterest };
-// Ensure the functions are exported for testing
+    module.exports = { calculateCAGR, CalculateFutureValue, calculateYearlyInterest };
+    // Ensure the functions are exported for testing
