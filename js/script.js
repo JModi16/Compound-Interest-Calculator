@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (yearStartAmount > 0) {
         cagr = Math.pow(totalAmount / yearStartAmount, 1 / 1) - 1; // Annual growth rate
     }
+    
 
     // Add a row to the table
     const row = document.createElement("tr");
@@ -121,6 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
         
          // Calculate Final CAGR
          if (years > 0 && initialInvestment > 0) {
+            console.log('Calling calculateCAGR with:', totalAmount, initialInvestment, years);
+            const cagr = calculateCAGR(totalAmount, initialInvestment, years);
             finalCagr = Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
         } else {
             finalCagr = 0; // Set CAGR to 0 if the denominator is invalid
@@ -183,5 +186,5 @@ function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFr
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
 }
 
-export default { calculateCAGR, calculateFutureValue, calculateYearlyInterest };
+module.exports = { calculateCAGR, CalculateFutureValue, calculateYearlyInterest };
 // Ensure the functions are exported for testing
