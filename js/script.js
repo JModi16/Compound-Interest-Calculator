@@ -23,13 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Please ensure all inputs are valid and greater than 0.");
             return;
 
-        }
-            // Initialize total values
-            let totalAmount = initialInvestment;
-            let totalContributions = 0;
-            let totalWithdrawals = 0;
-            let finalCagr = 0;
-        
         // Validate compoundfrequency
         if (compoundfrequency <= 0) {
             alert("Compounding frequency must be greater than 0.");
