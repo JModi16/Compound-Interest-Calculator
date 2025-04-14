@@ -113,7 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
 } else {
     console.error("Form element not found."); // Debugging message
 }
-})
+
+// Add event listener for the reset button
+if (resetButton) {
+    resetButton.addEventListener("click", function () {
+        // Clear the results section
 
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
@@ -154,6 +158,7 @@ function calculateFutureValue(
     }
 
     console.log("Final Future Value:", totalAmount); // Debugging log
+}
 
     function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
