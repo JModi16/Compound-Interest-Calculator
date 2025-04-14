@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Validate inputs
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
             alert("Please ensure all inputs are valid and greater than 0.");
-            return;
-        }
+                return;
 
      // Initialize total values
      let totalAmount = initialInvestment;
@@ -109,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(finalCagr * 100).toFixed(2)}%</span>`;
-    });
+    
 } else {
     console.error("Form element not found."); // Debugging message
 }
@@ -132,6 +131,7 @@ if (resetButton) {
         });
     }
 });
+
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
     if (years === 0) return 0; // Avoid division by zero
@@ -175,7 +175,5 @@ function calculateFutureValue(
 
     function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
-}
-
-    module.exports = { calculateCAGR, CalculateFutureValue, calculateYearlyInterest };
-    // Ensure the functions are exported for testing
+    }
+});
