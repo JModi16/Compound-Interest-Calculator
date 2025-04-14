@@ -24,27 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Validate compoundfrequency
-        if (compoundfrequency <= 0) {
-            alert("Compounding frequency must be greater than 0.");
-            console.error("Invalid compounding frequency: " + compoundfrequency); // Log error for debugging
-            return; // Stop further execution
-        }
-
-        if (initialInvestment <= 0) {
-            alert("Initial Investment must be greater than 0.");
-            return; // Stop further execution
-        }
-
-        if (annualinterestRate <= 0) {
-            alert("Interest rate must be greater than 0.");
-            return; // Stop further execution
-        }
-
-        if (years <= 0) {
-            alert("Number of years must be greater than 0.");
-            return; // Stop further execution
-        }
+        
         console.log("Form submitted!"); // Debugging message
 
         // Initialize total values
@@ -180,6 +160,7 @@ function calculateFutureValue(
 
     console.log("Final Future Value:", totalAmount); // Debugging log
     
+
 
     function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
