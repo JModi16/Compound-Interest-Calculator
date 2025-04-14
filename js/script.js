@@ -24,7 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        
+        // Define the calculateCAGR function
+        function calculateCAGR(totalAmount, initialInvestment, years) {
+        if (years === 0) return 0; // Avoid division by zero
+        return parseFloat((Math.pow(totalAmount / initialInvestment, 1 / years) - 1).toFixed(6));
+}
         console.log("Form submitted!"); // Debugging message
 
         // Initialize total values
