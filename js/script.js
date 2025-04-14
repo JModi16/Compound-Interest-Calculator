@@ -157,7 +157,7 @@ function calculateFutureValue(
 
     function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
-    }
+}
 
     module.exports = { calculateCAGR, CalculateFutureValue, calculateYearlyInterest };
     // Ensure the functions are exported for testing
