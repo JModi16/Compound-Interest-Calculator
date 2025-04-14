@@ -30,15 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
      let totalWithdrawals = 0;
      let finalCagr = 0; // Declare finalCagr outside the loop        
         
-        // Define the calculateCAGR function
-        function calculateCAGR(totalAmount, initialInvestment, years) {
-        if (years === 0) return 0; // Avoid division by zero
-        return parseFloat((Math.pow(totalAmount / initialInvestment, 1 / years) - 1).toFixed(6));
-}
-        console.log("Form submitted!"); // Debugging message
-
-       
-
          // Clear previous table rows
          const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
             if (resultsTableBody) {
