@@ -2,10 +2,11 @@ let totalAmount = 0; // Declare totalAmount at the top of the script
 document.addEventListener("DOMContentLoaded", function () {
     // Get the form element
     const form = document.getElementById("CompoundInterestForm");// Replace with actual form ID
-
+    const resetButton = document.getElementById("resetButton"); // Get the reset button
     if (form) {
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission for demonstratio
+            const resetButton = document.getElementById("resetButton"); // Get the reset button
 
         // Get user input values
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
@@ -136,45 +137,5 @@ if (resetButton) {
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
     if (years === 0) return 0; // Avoid division by zero
-    return parseFloat((Math.pow(totalAmount / initialInvestment, 1 / years) - 1).toFixed(6)); //Ensure precision
+    return parseFloat((Math.pow(totalAmount / initialInvestment, 1 / years) - 1)
 }
-
-function calculateFutureValue(
-    initialInvestment,
-    annualInterestRate,
-    compoundFrequency,
-    years,
-    depositAmount,
-    depositFrequency,
-    withdrawalAmount,
-    withdrawalFrequency
-) {
-    let totalAmount = initialInvestment;
-   
-
-    // Loop through each year to calculate future values
-    for (let i = 0; i < years; i++) {
-        // Apply deposits
-        for (let j = 0; j < depositFrequency; j++) {
-            totalAmount += depositAmount;
-            }
-        }
-
-        // Apply withdrawls
-        for (let k = 0; k < withdrawalFrequency; k++) {
-             totalAmount -= withdrawalAmount; 
-        }
-
-         // Apply interest compounding
-         for (let m = 0; m < compoundFrequency; m++) {
-            totalAmount *= (1 + annualInterestRate / compoundFrequency);
-        }
-    }
-
-    console.log("Final Future Value:", totalAmount); // Debugging log
-}
-
-    function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
-    return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
-    }
-});
