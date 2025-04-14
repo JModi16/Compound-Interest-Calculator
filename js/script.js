@@ -178,7 +178,8 @@ function calculateFutureValue(
         }
     }
 
-    return totalAmount;
+
+    console.log("Final Future Value:", totalAmount); // Debugging log
     
 
 
