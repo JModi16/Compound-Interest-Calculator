@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>£${totalContributions.toFixed(2)}</td>
             <td>£${totalWithdrawals.toFixed(2)}</td>
             <td>${(cagr * 100).toFixed(2)}%</td>
-
+        
     `;
          resultsTableBody.appendChild(row);
         }
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
          // Calculate Final CAGR
          if (years > 0 && initialInvestment > 0) {
             console.log('Calling calculateCAGR with:', totalAmount, initialInvestment, years);
-            finalCagr = Math.pow(totalAmount / initialInvestment, 1 / years) - 1;
+            finalCagr =  - calculateCAGR(totalAmount, initialInvestment, years); // Calculate Final CAGR
         } else {
             finalCagr = 0; // Set CAGR to 0 if the denominator is invalid
         }
