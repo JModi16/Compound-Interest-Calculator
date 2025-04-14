@@ -178,10 +178,8 @@ function calculateFutureValue(
         }
     }
 
-
     console.log("Final Future Value:", totalAmount); // Debugging log
     
-
 
     function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
