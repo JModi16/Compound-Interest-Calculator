@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the form element
     const form = document.getElementById("CompoundInterestForm");// Replace with actual form ID
     const resetButton = document.getElementById("resetButton"); // Get the reset button
+
     if (form) {
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission for demonstratio
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
             alert("Please ensure all inputs are valid and greater than 0.");
                 return;
+        }
 
      // Initialize total values
      let totalAmount = initialInvestment;
@@ -93,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>£${totalWithdrawals.toFixed(2)}</td>
             <td>${(cagr * 100).toFixed(2)}%</td>
         
-    `;
+    `   ;
          resultsTableBody.appendChild(row);
         }
         
@@ -110,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(finalCagr * 100).toFixed(2)}%</span>`;
-    
+    });
 } else {
     console.error("Form element not found."); // Debugging message
 }
@@ -137,5 +139,5 @@ if (resetButton) {
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
     if (years === 0) return 0; // Avoid division by zero
-    return parseFloat((Math.pow(totalAmount / initialInvestment, 1 / years) - 1)
+    return parseFloat((Math.pow(totalAmount / initialInvestment, 1 / years) - 1).toFixed(6));
 }
