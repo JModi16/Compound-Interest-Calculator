@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+     // Initialize total values
+     let totalAmount = initialInvestment;
+     let totalContributions = 0;
+     let totalWithdrawals = 0;
+     let finalCagr = 0; // Declare finalCagr outside the loop        
+        
         // Define the calculateCAGR function
         function calculateCAGR(totalAmount, initialInvestment, years) {
         if (years === 0) return 0; // Avoid division by zero
@@ -31,11 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
         console.log("Form submitted!"); // Debugging message
 
-        // Initialize total values
-        let totalAmount = initialInvestment;
-        let totalContributions = 0;
-        let totalWithdrawals = 0;
-        let finalCagr = 0; // Declare finalCagr outside the loop
+       
 
          // Clear previous table rows
          const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
@@ -163,8 +165,6 @@ function calculateFutureValue(
     }
 
     console.log("Final Future Value:", totalAmount); // Debugging log
-    
-
 
     function calculateYearlyInterest(yearStartAmount, annualInterestRate, compoundFrequency) {
     return yearStartAmount * Math.pow(1 + annualInterestRate / compoundFrequency, compoundFrequency) - yearStartAmount;
