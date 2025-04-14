@@ -1,3 +1,4 @@
+let totalAmount = 0; // Declare totalAmount at the top of the script
 document.addEventListener("DOMContentLoaded", function () {
     // Get the form element
     const form = document.getElementById("CompoundInterestForm");// Replace with actual form ID
