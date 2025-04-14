@@ -124,6 +124,14 @@ if (resetButton) {
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">0.00</span>`;
             document.getElementById('cagr').innerHTML = `CAGR: <span class="green">0.00%</span>`;
 
+            // Clear the investment breakdown table
+            const resultsTableBody = document.getElementById("results-body");
+            if (resultsTableBody) {
+                resultsTableBody.innerHTML = ""; // Clear all rows
+            }
+        });
+    }
+});
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
     if (years === 0) return 0; // Avoid division by zero
