@@ -118,6 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
 if (resetButton) {
     resetButton.addEventListener("click", function () {
         // Clear the results section
+        document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">0.00</span>`;
+            document.getElementById('totalContributions').innerHTML = `Total Contributions: <span class="black">0.00</span>`;
+            document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">0.00</span>`;
+            document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">0.00</span>`;
+            document.getElementById('cagr').innerHTML = `CAGR: <span class="green">0.00%</span>`;
 
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
