@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalContributions').innerHTML = `Total Contributions: <span class="black">£${totalContributions.toFixed(2)}</span>`;
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
-            document.getElementById('cagr').innerHTML = `CAGR: <span class="green">${(finalCagr * 100).toFixed(2)}%</span>`;
+            document.getElementById('cagr').innerHTML = `Adjusted CAGR (Net Contributions): <span class="green">${(finalCagr * 100).toFixed(2)}%</span>`;
     });
 } else {
     console.error("Form element not found."); // Debugging message
