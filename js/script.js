@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
          // Calculate Final CAGR
          if (years > 0 && initialInvestment > 0) {
-            console.log('Calling calculateCAGR with:', totalAmount, initialInvestment, years);
+            let netContributions = initialInvestment + totalContributions - totalWithdrawals;
             finalCagr =  - calculateCAGR(totalAmount, initialInvestment, years); // Calculate Final CAGR
         } else {
             finalCagr = 0; // Set CAGR to 0 if the denominator is invalid
