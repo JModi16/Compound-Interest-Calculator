@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (form) {
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission for demonstratio
-            const resetButton = document.getElementById("resetButton"); // Get the reset button
+            
 
         // Get user input values
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
