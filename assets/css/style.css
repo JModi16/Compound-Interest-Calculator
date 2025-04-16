@@ -216,28 +216,26 @@ h1, h2, p {
     padding: 10px;
 }
 
+#breakdown-results {
+    overflow-x: auto; /* Add horizontal scrolling for smaller screens */
+    margin-top:20px;
+}
+
 #resultsTable {
-    border-collapse: collapse;
-    font-size: 1em;
+    font-size: 0.8em;
     width: 100%;
     overflow-x: auto;
-    margin: top 20px;
+  
 }
 
 #resultsTable th, #resultsTable td {
-    border:1px solid #ddd;
-    padding: 8px;
+    padding: 5px;
     text-align: center;
     word-wrap: break-word; /* Ensure text wraps within the cell */
 }
-#resultsTable th {
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: bold;
+#resultsTable th, #resultsTable td {
+    padding: 5px;
+    text-align:center;
+    word-wrap: break-word;
 }
 
-/* Ensure table fits within the container */
-#breakdown-results {
-  overflow-x: auto; /* Add horizontal scrolling for smaller screens */
-  margin-top: 20px;
-}
