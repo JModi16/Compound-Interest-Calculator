@@ -76,6 +76,7 @@ h1, h2, p {
 }
 
 
+
 .input-group input:focus,
 .input-group select:focus {
   border-color: var(--primary-color);
@@ -120,3 +121,19 @@ h1, h2, p {
 .green {
     color: green;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+    padding: 20px;
+  }
+
+  #interest-calculator {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h1, h2, p {
+    font-size: 1.5em;
+  }
