@@ -158,4 +158,66 @@ h1, h2, p {
     padding: 15px;
   }
 
-  
+  #results {
+    font-size: 1em;
+}
+
+/* For smartphones (screen width up to 600px) */
+@media (max-width: 600px) {
+  body {
+      padding: 10px;
+  }
+
+  .container {
+      width: 100%;
+      padding: 15px;
+      margin: 10px auto;
+  }
+
+  #interest-calculator {
+      width: 100%;
+      padding: 15px;
+  }
+
+  h1, h2, p {
+      font-size: 1em;
+  }
+
+  .input-group {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .input-group label {
+      text-align: left;
+      padding-right: 0;
+      margin-bottom: 5px;
+  }
+
+}
+.input-group input, 
+.input-group select {
+    width: 100%;
+}
+
+#calculate-button, #resetButton {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#results {
+    font-size: 0.9em;
+    padding: 10px;
+}
+
+#resultsTable {
+    font-size: 0.8em;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#resultsTable th, #resultsTable td {
+    padding: 5px;
+    text-align: center;
+}
+}
