@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         totalAmount -= withdrawalAmount; //Subtract withdrawl
                         totalWithdrawals += withdrawalAmount; //Track total withdrawals
                         yearWithdrawals += withdrawalAmount;
-                  state
+                // (Removed the incomplete statement)
                     }
                 }
             }
