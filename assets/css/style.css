@@ -13,16 +13,10 @@ body {
 
 /* Container */
 :root {
-  
   --border-radius: 15px;
   --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  --font-family: "Arial", sans-serif;
-  --primary-font: "Inter", sans-serif;
-  --secondary-font:"Macando", cursive;
-  --primary-color: #004aad; /* dark blue */
-  --secondary-color: #aa9581; /* light brown */
-  --highlight-color: #416a8e; /* blue */
-  --highlight-color-light: #7a9fc2; /* light blue */
+  --primary-color: #4CAF50;
+  --font-family: 'Arial', sans-serif;
 }
 
 
