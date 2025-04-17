@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         totalWithdrawals += withdrawalAmount; //Track total withdrawals
                         yearWithdrawals += withdrawalAmount;
                     } else {
-                        console.error("Not enough funds available to process withdrawal."); // Log error
                         alert("Not enough funds available to process withdrawal. Stopping calculation."); // Notify user
                         break; // stop withdrawls if not enough funds
                     }
