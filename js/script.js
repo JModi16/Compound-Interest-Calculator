@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         yearWithdrawals += withdrawalAmount;
                     } else {
                         alert("Not enough funds available to process withdrawal. Stopping calculation."); // Notify user
-                        break; // stop withdrawls if not enough funds
+                        return; // stop withdrawls if not enough funds
                     }
                 }
             }
