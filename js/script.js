@@ -6,6 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (form) {
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission
+
+            const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
+            if (!resultsTableBody) {
+                console.error("The results table body element is missing in the DOM.");
+            return; // Stop further execution
+        }
+
+        resultsTableBody.innerHTML = ""; // Clear all rows
+
+        // Proceed with calculations...
             
 
         // Get user input values
@@ -40,15 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
             depositFrequency = parseInt(depositFrequency) || 1; // Default to 1 if not selected
             withdrawalFrequency = parseInt(withdrawalFrequency) || 1; // Default to 1 if not selected
 
-          // Clear previous table rows
-          const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
-          if (resultsTableBody) {
-              console.error("The results table body element is missing in the DOM.");
-          return; // Stop further execution
-      }
-        resultsTableBody.innerHTML = ""; // Clear all rows
-
-        // Proceed with calculations...
+          
+         
+        
 
      // Initialize total values
      let totalAmount = initialInvestment;
