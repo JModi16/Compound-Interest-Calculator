@@ -79,15 +79,23 @@ document.addEventListener("DOMContentLoaded", function () {
             
             // Apply withdrawals and interest compounding for each withdrawal period
             for (let k = 0; k < withdrawalFrequency; k++) {
-                if (withdrawalAmount > 0 && totalAmount >= withdrawalAmount) {
-                    totalAmount -= withdrawalAmount; //Subtract withdrawl
-                    totalWithdrawals += withdrawalAmount; //Track total withdrawals
-                    yearWithdrawals += withdrawalAmount;
-                } else {
-                    alert("Insufficient funds for withdrawal or withdrawal amount is 0.");
+                if (withdrawalAmount <= 0) {
+                    console.log("Withdrawal amount is 0 or not entered.");
+                    alert("Please enter a valid withdrawal amount greater than 0.");
                     return; // Stop further execution
                 }
-            }
+            
+                if (totalAmount < withdrawalAmount) {
+                    console.log("Insufficient funds for withdrawal.");
+                    alert("Insufficient funds for withdrawal. Please adjust your withdrawal amount.");
+                    return; // Stop further execution
+                }
+
+                  // If both conditions pass, process the withdrawal
+                totalAmount -= withdrawalAmount; // Subtract withdrawal
+                totalWithdrawals += withdrawalAmount; // Track total withdrawals
+                yearWithdrawals += withdrawalAmount;
+}
 
             //Apply interest compounding for each year
             let yearStartAmount = totalAmount;
