@@ -19,12 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
         let withdrawalFrequency = document.getElementById("withdrawalFrequency").value; // Get as a string
+
         // Validate inputs
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
             alert("Please ensure all inputs are valid and greater than 0.");
-                return;
+            return;
             }
             if (depositAmount > 0 && (depositFrequency === "" || isNaN(parseInt(depositFrequency)))) {
+                alert("Please select a valid deposit frequency.");
+                return; // Stop form submission
             }
 
             if (withdrawalAmount > 0 && (withdrawalFrequency === "" || isNaN(parseInt(withdrawalFrequency)))) {
