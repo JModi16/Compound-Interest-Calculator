@@ -23,9 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
             alert("Please ensure all inputs are valid and greater than 0.");
                 return;
-        }
+            }
+            if (depositAmount > 0 && (depositFrequency === "" || isNaN(parseInt(depositFrequency)))) {
+            }
 
-        if (depositAmount > 0 && (depositFrequency === "" || isNaN(parseInt(depositFrequency)))) {
+            if (withdrawalAmount > 0 && (withdrawalFrequency === "" || isNaN(parseInt(withdrawalFrequency)))) {
+                alert("Please select a valid withdrawal frequency.");
+                return; // Stop form submission
+            }
+
+            // Convert frequencies to integers
+            depositFrequency = parseInt(depositFrequency) || 1; // Default to 1 if not selected
+            withdrawalFrequency = parseInt(withdrawalFrequency) || 1; // Default to 1 if not selected
+
+            // Proceed with calculations...
+        });
             alert("Please select a valid deposit frequency.");
             return; // Stop form submission
         }
@@ -41,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
         withdrawalFrequency = parseInt(withdrawalFrequency) || 1; // Default to 1 if not selected
 
         // Proceed with calculations...
-
          });
 
      // Initialize total values
@@ -134,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
 if (resetButton) {
     resetButton.addEventListener("click", function () {
         // Clear the results section
-        document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">0.00</span>`;
+            document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">0.00</span>`;
             document.getElementById('totalContributions').innerHTML = `Total Contributions: <span class="black">0.00</span>`;
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">0.00</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">0.00</span>`;
@@ -147,7 +158,7 @@ if (resetButton) {
             }
         });
     }
-});
+
 
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
