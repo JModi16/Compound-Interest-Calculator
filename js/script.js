@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Clear previous table rows
           const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
-          if (!resultsTableBody) {
+          if (resultsTableBody) {
               console.error("The results table body element is missing in the DOM.");
           return; // Stop further execution
       }
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
      let totalWithdrawals = 0;
      let finalCagr = 0; // Declare finalCagr outside the loop        
         
+
 
           // Loop through each year to calculate future values
           for (let i = 0; i < years; i++) {
@@ -144,8 +145,7 @@ if (resetButton) {
             }
         });
     }
-
-
+});
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
     if (years === 0) return 0; // Avoid division by zero
