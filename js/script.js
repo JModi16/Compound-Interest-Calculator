@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Clear previous table rows
           const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
-          if (resultsTableBody) {
+          if (!resultsTableBody) {
               console.error("The results table body element is missing in the DOM.");
           return; // Stop further execution
       }
@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
      let totalWithdrawals = 0;
      let finalCagr = 0; // Declare finalCagr outside the loop        
         
-       
 
           // Loop through each year to calculate future values
           for (let i = 0; i < years; i++) {
@@ -76,15 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
             
             // Apply withdrawals and interest compounding for each withdrawal period
             for (let k = 0; k < withdrawalFrequency; k++) {
-                if (withdrawalAmount > 0) { // Only apply if withdrawal amount is greater than 0
-                    if (totalAmount >= withdrawalAmount) {
+                if (withdrawalAmount > 0 && totalAmount >= withdrawalAmount) {
                         totalAmount -= withdrawalAmount; //Subtract withdrawl
                         totalWithdrawals += withdrawalAmount; //Track total withdrawals
                         yearWithdrawals += withdrawalAmount;
                 // (Removed the incomplete statement)
                     }
                 }
-            }
 
             //Apply interest compounding for each year
             let yearStartAmount = totalAmount;
