@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (form) {
         form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent form submission for demonstratio
+            event.preventDefault(); // Prevent form submission
             
 
         // Get user input values
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
         let depositFrequency = document.getElementById("depositFrequency").value; // Get as a string
-
         let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
         let withdrawalFrequency = document.getElementById("withdrawalFrequency").value; // Get as a string
 
@@ -25,35 +24,21 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Please ensure all inputs are valid and greater than 0.");
             return;
             }
+            // Validate deposit frequency only if deposit amount is entered
             if (depositAmount > 0 && (depositFrequency === "" || isNaN(parseInt(depositFrequency)))) {
                 alert("Please select a valid deposit frequency.");
-                return; // Stop form submission
+                return; 
             }
 
+            // Validate withdrawal frequency only if withdrawal amount is entered
             if (withdrawalAmount > 0 && (withdrawalFrequency === "" || isNaN(parseInt(withdrawalFrequency)))) {
                 alert("Please select a valid withdrawal frequency.");
-                return; // Stop form submission
+                return;
             }
 
             // Convert frequencies to integers
             depositFrequency = parseInt(depositFrequency) || 1; // Default to 1 if not selected
             withdrawalFrequency = parseInt(withdrawalFrequency) || 1; // Default to 1 if not selected
-
-            // Proceed with calculations...
-        });
-            alert("Please select a valid deposit frequency.");
-            return; // Stop form submission
-        }
-        
-        if (withdrawalAmount > 0 && (withdrawalFrequency === "" || isNaN(parseInt(withdrawalFrequency)))) {
-            alert("Please select a valid withdrawal frequency.");
-            return; // Stop form submission
-
-        }
-
-        // Convert frequencies to integers
-        depositFrequency = parseInt(depositFrequency) || 1; // Default to 1 if not selected
-        withdrawalFrequency = parseInt(withdrawalFrequency) || 1; // Default to 1 if not selected
 
           // Clear previous table rows
           const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
@@ -80,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let yearWithdrawals = 0;
             let yearInterest = 0;
 
-            // Apply deposits and interest compounding for each deposit period
+            // Apply deposits  for each deposit period
             for (let j = 0; j < depositFrequency; j++) {
                 if (depositAmount > 0) { // Only apply if deposit amount is greater than 0
                     totalAmount += depositAmount;
@@ -140,7 +125,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR (Capital Annual Growth Rate): <span class="green">${(finalCagr * 100).toFixed(2)}%</span>`;
-    console.error("Form element not found."); // Debugging message
+    } else {
+        console.error("Form element not found."); // Debugging message
+    }
 
 
 // Add event listener for the reset button
