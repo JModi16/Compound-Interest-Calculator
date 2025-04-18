@@ -15,33 +15,34 @@ document.addEventListener("DOMContentLoaded", function () {
         let years = parseInt(document.getElementById("years").value) || 0;
 
         let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
-        let depositFrequency = document.getElementById("depositFrequency").value) || 1; // Default to 1 to avoid division by zero
+        let depositFrequency = document.getElementById("depositFrequency").value; // Get as a string
 
         let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
-        let withdrawalFrequency = document.getElementById("withdrawalFrequency").value) || 1; // Default to 1 to avoid division by zero
-
+        let withdrawalFrequency = document.getElementById("withdrawalFrequency").value; // Get as a string
         // Validate inputs
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
             alert("Please ensure all inputs are valid and greater than 0.");
                 return;
         }
 
-        if (depositAmount > 0 && depositFrequency === "") {
-            alert("Please select a deposit frequency.");
+        if (depositAmount > 0 && (depositFrequency === "" || isNaN(parseInt(depositFrequency)))) {
+            alert("Please select a valid deposit frequency.");
             return; // Stop form submission
         }
-
-        if (withdrawalAmount > 0 && withdrawalFrequency === "") {
-            alert("Please select a withdrawal frequency.");
+        
+        if (withdrawalAmount > 0 && (withdrawalFrequency === "" || isNaN(parseInt(withdrawalFrequency)))) {
+            alert("Please select a valid withdrawal frequency.");
             return; // Stop form submission
+
         }
 
         // Convert frequencies to integers
         depositFrequency = parseInt(depositFrequency) || 1; // Default to 1 if not selected
         withdrawalFrequency = parseInt(withdrawalFrequency) || 1; // Default to 1 if not selected
 
-    // Proceed with calculations...
-    
+        // Proceed with calculations...
+
+         });
 
      // Initialize total values
      let totalAmount = initialInvestment;
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
          const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
             if (resultsTableBody) {
                 resultsTableBody.innerHTML = ""; // Clear previous rows
-        } else {
+        if (!resultsTableBody) {
             console.error("The results table body element is missing in the DOM.");
             return; // Stop further execution
         }
@@ -124,10 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR (Capital Annual Growth Rate): <span class="green">${(finalCagr * 100).toFixed(2)}%</span>`;
-    });
-} else {
-    console.error("Form element not found."); // Debugging message
-}
+    } else {
+        console.error("Form element not found."); // Debugging message
+    }
+
 
 // Add event listener for the reset button
 if (resetButton) {
