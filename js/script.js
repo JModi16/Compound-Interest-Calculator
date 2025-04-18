@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
         let years = parseInt(document.getElementById("years").value) || 0;
 
         let depositAmount = parseFloat(document.getElementById("depositAmount").value) || 0;
-        let depositFrequency = parseInt(document.getElementById("depositFrequency").value) || 1; // Default to 1 to avoid division by zero
+        let depositFrequency = document.getElementById("depositFrequency").value) || 1; // Default to 1 to avoid division by zero
 
         let withdrawalAmount = parseFloat(document.getElementById("withdrawalAmount").value) || 0;
-        let withdrawalFrequency = parseInt(document.getElementById("withdrawalFrequency").value) || 1; // Default to 1 to avoid division by zero
+        let withdrawalFrequency = document.getElementById("withdrawalFrequency").value) || 1; // Default to 1 to avoid division by zero
 
         // Validate inputs
         if (compoundfrequency <= 0 || initialInvestment <= 0 || annualinterestRate <= 0 || years <= 0) {
