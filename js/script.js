@@ -26,6 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
         }
 
+        if (depositAmount > 0 && depositFrequency === "") {
+            alert("Please select a deposit frequency.");
+            return; // Stop form submission
+        }
+
+        if (withdrawalAmount > 0 && withdrawalFrequency === "") {
+            alert("Please select a withdrawal frequency.");
+            return; // Stop form submission
+        }
+
      // Initialize total values
      let totalAmount = initialInvestment;
      let totalContributions = 0;
