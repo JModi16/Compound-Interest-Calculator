@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
         resultsTableBody.innerHTML = ""; // Clear all rows
 
         // Proceed with calculations...
-         });
 
      // Initialize total values
      let totalAmount = initialInvestment;
@@ -99,15 +98,14 @@ document.addEventListener("DOMContentLoaded", function () {
     
      // Add a row to the table
         const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${i + 1}</td>
-            <td>£${totalAmount.toFixed(2)}</td>
-            <td>£${yearInterest.toFixed(2)}</td>
-            <td>£${totalContributions.toFixed(2)}</td>
-            <td>£${totalWithdrawals.toFixed(2)}</td>
-            <td>${(cagr * 100).toFixed(2)}%</td>
-        
-    `   ;
+    row.innerHTML = `
+        <td>${i + 1}</td>
+        <td>£${totalAmount.toFixed(2)}</td>
+        <td>£${yearInterest.toFixed(2)}</td>
+        <td>£${totalContributions.toFixed(2)}</td>
+        <td>£${totalWithdrawals.toFixed(2)}</td>
+        <td>${(cagr * 100).toFixed(2)}%</td>
+    `;
          resultsTableBody.appendChild(row);
         }
         
@@ -116,15 +114,16 @@ document.addEventListener("DOMContentLoaded", function () {
             finalCagr = calculateCAGR(totalAmount, initialInvestment, years); // Calculate Final CAGR
         } else {
             finalCagr = 0; // Set CAGR to 0 if the denominator is invalid
-        }
+        });
             // Display the results
             document.getElementById('futureValue').innerHTML = `Future Value: <span class="black">£${(totalAmount || 0).toFixed(2)}</span>`;
             document.getElementById('totalContributions').innerHTML = `Total Contributions: <span class="black">£${(totalContributions || 0).toFixed(2)}</span>`;
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${(totalWithdrawals || 0).toFixed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${((totalAmount || 0) - (initialInvestment || 0) - (totalContributions || 0) + (totalWithdrawals || 0)).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR (Capital Annual Growth Rate): <span class="green">${((finalCagr || 0) * 100).toFixed(2)}%</span>`;
-        });
-    }
+            }
+        }
+    });
 
 
 // Add event listener for the reset button
