@@ -55,6 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
         depositFrequency = parseInt(depositFrequency) || 1; // Default to 1 if not selected
         withdrawalFrequency = parseInt(withdrawalFrequency) || 1; // Default to 1 if not selected
 
+          // Clear previous table rows
+          const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
+          if (resultsTableBody) {
+              console.error("The results table body element is missing in the DOM.");
+          return; // Stop further execution
+      }
+        resultsTableBody.innerHTML = ""; // Clear all rows
+
         // Proceed with calculations...
          });
 
@@ -64,14 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
      let totalWithdrawals = 0;
      let finalCagr = 0; // Declare finalCagr outside the loop        
         
-         // Clear previous table rows
-         const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
-            if (resultsTableBody) {
-                resultsTableBody.innerHTML = ""; // Clear previous rows
-        if (!resultsTableBody) {
-            console.error("The results table body element is missing in the DOM.");
-            return; // Stop further execution
-        }
+       
 
           // Loop through each year to calculate future values
           for (let i = 0; i < years; i++) {
@@ -139,9 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalWithdrawals').innerHTML = `Total Withdrawals: <span class="red">£${totalWithdrawals.toFixed(2)}</span>`;
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${(totalAmount - initialInvestment - totalContributions + totalWithdrawals).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR (Capital Annual Growth Rate): <span class="green">${(finalCagr * 100).toFixed(2)}%</span>`;
-    } else {
-        console.error("Form element not found."); // Debugging message
-    }
+    console.error("Form element not found."); // Debugging message
 
 
 // Add event listener for the reset button
