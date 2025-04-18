@@ -36,6 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
             return; // Stop form submission
         }
 
+        // Convert frequencies to integers
+        depositFrequency = parseInt(depositFrequency) || 1; // Default to 1 if not selected
+        withdrawalFrequency = parseInt(withdrawalFrequency) || 1; // Default to 1 if not selected
+
+    // Proceed with calculations...
+    
+
      // Initialize total values
      let totalAmount = initialInvestment;
      let totalContributions = 0;
