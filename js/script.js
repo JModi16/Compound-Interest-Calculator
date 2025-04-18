@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     totalWithdrawals += withdrawalAmount; //Track total withdrawals
                     yearWithdrawals += withdrawalAmount;
                 } else {
-                    console.log("Insufficient funds for withdrawal or withdrawal amount is 0.");
                     alert("Insufficient funds for withdrawal or withdrawal amount is 0.");
                     return; // Stop further execution
                 }
