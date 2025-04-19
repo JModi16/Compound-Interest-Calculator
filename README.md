@@ -5,7 +5,7 @@ Calculate the value of a future investment during a fixed period, from an initia
 ### HTML
 * One tested using the [W3C Validator](https://validator.w3.org/)
 * No errors were encountered. Document checking complete with no errors or warnings.I had a few misplaced closing <div> tags but were removed and adjusted.
-* [My W3Validator Testing result)(documentation/compoundcalculatorw3.png)
+* [My W3Validator Testing result](documentation/compoundcalculatorw3.png)
   
 ### CSS
 * [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS, and shows no errors.
