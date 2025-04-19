@@ -114,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>£${yearInterest.toFixed(2)}</td>
         <td>£${totalContributions.toFixed(2)}</td>
         <td>£${totalWithdrawals.toFixed(2)}</td>
-        <td>${(cagr * 100).toFixed(2)}%</td>
     `;
          resultsTableBody.appendChild(row);
         }
