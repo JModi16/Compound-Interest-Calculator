@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Apply withdrawals and interest compounding for each withdrawal period
             for (let k = 0; k < withdrawalFrequency; k++) {
                 if (withdrawalAmount <= 0) {
+                    if (totalAmount < withdrawalAmount) {
                     console.log("Withdrawal amount is 0 or not entered.");
                     alert("Please enter a valid withdrawal amount greater than 0.");
                     return; // Stop further execution
@@ -89,7 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 totalAmount -= withdrawalAmount; // Subtract withdrawal
                 totalWithdrawals += withdrawalAmount; // Track total withdrawals
                 yearWithdrawals += withdrawalAmount;
-}
+            }
+        }
 
             //Apply interest compounding for each year
             let yearStartAmount = totalAmount;
