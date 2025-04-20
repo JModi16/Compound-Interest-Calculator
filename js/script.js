@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (withdrawalAmount > 0) {
                     if (totalAmount < withdrawalAmount) {
                     console.log("Insufficient funds for withdrawal.");
-                    alert("Please enter a valid withdrawal amount greater than 0.");
+                    alert("Insufficient funds for withdrawal. Please adjust withdrawal amount and recalculate.");
                     return; // Stop further execution
                 }
 
