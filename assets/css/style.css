@@ -172,7 +172,7 @@ h1, h2, p {
 /* For smartphones (screen width up to 600px) */
 @media (max-width: 600px) {
   body {
-      padding: 5px;
+      padding: 20px; /*increase padding for smaller screens */
   }
 
   .container {
