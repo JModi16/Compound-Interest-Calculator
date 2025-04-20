@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
             for (let k = 0; k < withdrawalFrequency; k++) {
                 if (withdrawalAmount > 0) {
                     if (totalAmount < withdrawalAmount) {
-                    console.log("Withdrawal amount is 0 or not entered.");
+                    console.log("Insufficient funds for withdrawal.");
                     alert("Please enter a valid withdrawal amount greater than 0.");
                     return; // Stop further execution
                 }
