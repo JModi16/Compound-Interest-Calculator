@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("CompoundInterestForm");// Replace with actual form ID
     const resetButton = document.getElementById("resetButton"); // Get the reset button
     const calculateButton = document.getElementById("calculate-button"); // Get the "Calculate My Investment" button
+    const resultsTableBody = document.getElementById("results-body"); // Get the results table body
 
     if (form) {
         // Handle Enter key press
@@ -10,15 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
             if (event.key === "Enter") {
                 event.preventDefault(); // Prevent default behavior
                 calculateButton.click(); // Trigger the "Calculate My Investment" button
+            // (Remove this line entirely as it is an extra closing brace)
             }
         });
 
-    
         // Handle form submission
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission
 
-            const resultsTableBody = document.getElementById("results-body"); //replaced with table id in html
+           
             if (!resultsTableBody) {
                 console.error("The results table body element is missing in the DOM.");
             return; // Stop further execution
@@ -160,9 +161,8 @@ if (resetButton) {
             if (resultsTableBody) {
                 resultsTableBody.innerHTML = ""; // Clear all rows
             }
-        });
-    }
-});
+    });
+}
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
     if (years === 0) return 0; // Avoid division by zero
