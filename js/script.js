@@ -5,6 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const calculateButton = document.getElementById("calculate-button"); // Get the "Calculate My Investment" button
 
     if (form) {
+        // Handle Enter key press
+        form.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent default behavior
+                calculateButton.click(); // Trigger the "Calculate My Investment" button
+            }
+        });
+
+    
         // Handle form submission
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission
@@ -18,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
         resultsTableBody.innerHTML = ""; // Clear all rows
 
         // Proceed with calculations...
-            
-
+    });     
+    }
         // Get user input values
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
         let annualinterestRate = (parseFloat(document.getElementById("interest-rate").value) || 0) / 100;
