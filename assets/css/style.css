@@ -32,7 +32,6 @@ body {
 
 /* Interest Calculator */
 #interest-calculator {
-  
   text-align:center;
   border:2px solid var(--primary-color);
   border-radius: var(--border-radius);
