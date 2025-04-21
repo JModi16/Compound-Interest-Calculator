@@ -2,14 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the form element
     const form = document.getElementById("CompoundInterestForm");// Replace with actual form ID
     const resetButton = document.getElementById("resetButton"); // Get the reset button
-    const resultsTableBody = document.getElementById("results-body"); // Get the results table body
-
+    
     if (form) {
         
         // Handle form submission
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission
-
+          
+            const resultsTableBody = document.getElementById("results-body"); // Get the results table body
             if (!resultsTableBody) {
                 console.error("The results table body element is missing in the DOM.");
             return; // Stop further execution
