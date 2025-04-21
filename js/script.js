@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (event.key === "Enter") {
                 event.preventDefault(); // Prevent default behavior
                 calculateButton.click(); // Trigger the "Calculate My Investment" button
-            // (Remove this line entirely as it is an extra closing brace)
             }
         });
 
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Proceed with calculations...
     });     
-    }
+}
         // Get user input values
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
         let annualinterestRate = (parseFloat(document.getElementById("interest-rate").value) || 0) / 100;
@@ -143,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${((totalAmount || 0) - (initialInvestment || 0) - (totalContributions || 0) + (totalWithdrawals || 0)).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR (Capital Annual Growth Rate): <span class="green">${((finalCagr || 0) * 100).toFixed(2)}%</span>`;
     });
-}
+
 
 
 // Add event listener for the reset button
@@ -161,8 +160,10 @@ if (resetButton) {
             if (resultsTableBody) {
                 resultsTableBody.innerHTML = ""; // Clear all rows
             }
-    });
+     });
 }
+
+
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
     if (years === 0) return 0; // Avoid division by zero
