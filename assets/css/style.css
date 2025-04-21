@@ -44,12 +44,13 @@ body {
   }
 
 
-h1, h2, p {
+h1, h2 {
   color: var(--primary-color);
   margin-bottom: 20px;
   font-family: var(--font-family);
   text-align: center;
 }
+
 
 #interest-calculator  .input-group {
   margin-bottom: 20px;
@@ -172,7 +173,7 @@ h1, h2, p {
 /* For smartphones (screen width up to 600px) */
 @media (max-width: 600px) {
   body {
-      padding: 10px; /*increase padding for smaller screens */
+      padding: 8px; /*increase padding for smaller screens */
   }
 
   .container {
