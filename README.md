@@ -26,3 +26,5 @@ Calculate the value of a future investment during a fixed period, from an initia
 *  SEO:           50%
 *Lighthouse testing was performed using [Google Chrome Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) extension.
   * [My Lighthouse Testing Results](documentation/compound-lighthouse.png)
+
+  * [Reset Button](documentation/compoundreset.mp4)
