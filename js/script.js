@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         resultsTableBody.innerHTML = ""; // Clear all rows
 
-        // Proceed with calculations...
-    });     
-}
         // Get user input values
         let initialInvestment = parseFloat(document.getElementById("initialInvestment").value) || 0;
         let annualinterestRate = (parseFloat(document.getElementById("interest-rate").value) || 0) / 100;
@@ -129,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('totalInterest').innerHTML = `Total Interest: <span class="blue">£${((totalAmount || 0) - (initialInvestment || 0) - (totalContributions || 0) + (totalWithdrawals || 0)).toFixed(2)}</span>`;
             document.getElementById('cagr').innerHTML = `CAGR (Capital Annual Growth Rate): <span class="green">${((finalCagr || 0) * 100).toFixed(2)}%</span>`;
     });
-
+}
 
 
 // Add event listener for the reset button
@@ -149,7 +146,7 @@ if (resetButton) {
             }
      });
 }
-
+});
 
 // Define the calculateCAGR function
 function calculateCAGR(totalAmount, initialInvestment, years) {
