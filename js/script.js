@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the form element
     const form = document.getElementById("CompoundInterestForm");// Replace with actual form ID
     const resetButton = document.getElementById("resetButton"); // Get the reset button
+    const calculateButton = document.getElementById("calculate-button"); // Get the "Calculate My Investment" button
 
     if (form) {
+        // Handle form submission
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission
 
