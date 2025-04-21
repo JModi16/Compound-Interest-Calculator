@@ -2,23 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the form element
     const form = document.getElementById("CompoundInterestForm");// Replace with actual form ID
     const resetButton = document.getElementById("resetButton"); // Get the reset button
-    const calculateButton = document.getElementById("calculate-button"); // Get the "Calculate My Investment" button
     const resultsTableBody = document.getElementById("results-body"); // Get the results table body
 
     if (form) {
-        // Handle Enter key press
-        form.addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
-                event.preventDefault(); // Prevent default behavior
-                calculateButton.click(); // Trigger the "Calculate My Investment" button
-            }
-        });
-
+        
         // Handle form submission
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission
 
-           
             if (!resultsTableBody) {
                 console.error("The results table body element is missing in the DOM.");
             return; // Stop further execution
@@ -60,10 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // Convert frequencies to integers
             depositFrequency = parseInt(depositFrequency) || 1; // Default to 1 if not selected
             withdrawalFrequency = parseInt(withdrawalFrequency) || 1; // Default to 1 if not selected
-
-          
-         
-        
 
      // Initialize total values
      let totalAmount = initialInvestment;
