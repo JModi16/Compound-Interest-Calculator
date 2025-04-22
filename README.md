@@ -13,18 +13,14 @@ The tool is not just limited to calculating the compounded future value using y
 
 ## Contents
 
- 
 * [Languages Used](#languages-used)
-* [User Experience (UX)](#user-experience-ux)
-  * [Project Goals](#project-goals)
-  * [User Goals](#user-goals)
-  * [Site Owner Goals](#site-owner-goals)
+* [User-Experience-Design](user-experience-design)
   * [User Stories](#user-stories)
 * [Design](#design)
-  * [Colour](colour)
-  * [Fonts](fonts)
-* [Wireframes](#wireframes)
-* [Structure](#structure)
+  * [Colour](#Colour)
+  * [Fonts](#Fonts)
+* [Wireframes](#Wireframes)
+* [Structure](#Structure)
   [Features](#Features)
    *[Scenarios](#Scenarios)
    *[Functions](#Functions)
@@ -41,45 +37,30 @@ The tool is not just limited to calculating the compounded future value using y
 * [Deployment](#deployment)
 * [Credits](#credits)
   
-## **Languages Used**
+## Languages Used
 
-* HTML   
-* CSS3
-* JavaScript
-
-# User Experience (UX)  
+*  [HTML5](https://en.wikipedia.org/wiki/HTML5)
+*  [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+*  [JS](https://en.wikipedia.org/wiki/JavaScript)
+  
+## User-Experience-Design
 
 ## User Stories         
 
 ### First Time and Regular Visitor Goals 
-1.  As a first time or regular user, coming from a totally non-technical background I want to check the value of my future value using a desired value : Investment amount, rate and select the amount of compound times per year. 
-    
+1.  As a first time or regular user, coming from a totally non-technical background I want to check the value of my future value using a desired value : Investment amount, rate and select the amount of compound times per year.    
 2.  As a first time user or regular user, I want to be able to change the investment amount, interest rate and select the amount of compound times per year. 
-    
-
 3.  As a first time user or regular user to check the value of my investment, using a desired value : Investment amount, interest rate and select the amount of compound times per year, deposit amount, select deposit frequency, select the withdrawal amount and select the withdrawal frequency.   
-    
-
 4.  As a first time and regular user, I want to be able to reset the previous form, enabling all input fields and future investment results and breakdown value are deleted, enabling the form to be submitted with blank input values. 
     
 
 ### As a Developer, I want to: 
 
 1.  Ensure that all input fields on the form which are mandatory are completed.  
-    
-
 2.  Ensure the form is accessible on pc, mobile and tablet devices 
-    
-
 3.  Ensure form is accessible on Chrome, Safari and Edge 
-    
-
 4.  Ensure the form provides the accurate future value, using the calculation formula in the script.js file. 
-    
-
 5.  Ensure the form provides accurate future value ,  using the calculation formula in the  script.js file when deposits and/ or withdrawals are applied or neither are applied. 
-    
-
 6.  Ensure the correct compound annual growth rate (cagr) is calculated based within the investment results and investment breakdown. 
     
 
