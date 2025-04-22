@@ -13,20 +13,17 @@ The tool is not just limited to calculating the compounded future value using y
 
 ## Contents
 
- 
 * [Languages Used](#languages-used)
-* [User Experience (UX)](#user-experience-ux)
-  * [Project Goals](#project-goals)
-  * [User Goals](#user-goals)
-  * [Site Owner Goals](#site-owner-goals)
+* [User-Experience-Design](user-experience-design)
   * [User Stories](#user-stories)
 * [Design](#design)
-  * [Colour](colour)
-  * [Fonts](fonts)
-* [Wireframes](#wireframes)
-* [Structure](#structure)
+  * [Colour](#Colour)
+  * [Fonts](#Fonts)
+* [Wireframes](#Wireframes)
+* [Structure](#Structure)
   [Features](#Features)
    *[Scenarios](#Scenarios)
+   *[Functions](#Functions)
 * [Technologies Used](#technologies-used)
 * [ Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 * [Testing](#Testing)
@@ -34,48 +31,36 @@ The tool is not just limited to calculating the compounded future value using y
   * [Lighthouse-testing](#lighthouse-testing)
   * [User-Testing-Functionality](#user-testing-functionality)
   * [Bugs on Site](#bugs-on-site)
+  * [Physical Device Testing](#physical-device-testing)
+  * [Manual Browser Testing](browser-testing)
+* [Incomplete Tasks](#incomplete-tasks)
 * [Deployment](#deployment)
 * [Credits](#credits)
   
-## **Languages Used**
+## Languages Used
 
-* HTML   
-* CSS3
-* JavaScript
-
-# User Experience (UX)  
+*  [HTML5](https://en.wikipedia.org/wiki/HTML5)
+*  [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+*  [JS](https://en.wikipedia.org/wiki/JavaScript)
+  
+## User-Experience-Design
 
 ## User Stories         
 
 ### First Time and Regular Visitor Goals 
-1.  As a first time or regular user, coming from a totally non-technical background I want to check the value of my future value using a desired value : Investment amount, rate and select the amount of compound times per year. 
-    
+1.  As a first time or regular user, coming from a totally non-technical background I want to check the value of my future value using a desired value : Investment amount, rate and select the amount of compound times per year.    
 2.  As a first time user or regular user, I want to be able to change the investment amount, interest rate and select the amount of compound times per year. 
-    
-
 3.  As a first time user or regular user to check the value of my investment, using a desired value : Investment amount, interest rate and select the amount of compound times per year, deposit amount, select deposit frequency, select the withdrawal amount and select the withdrawal frequency.   
-    
-
 4.  As a first time and regular user, I want to be able to reset the previous form, enabling all input fields and future investment results and breakdown value are deleted, enabling the form to be submitted with blank input values. 
     
 
 ### As a Developer, I want to: 
 
 1.  Ensure that all input fields on the form which are mandatory are completed.  
-    
-
 2.  Ensure the form is accessible on pc, mobile and tablet devices 
-    
-
 3.  Ensure form is accessible on Chrome, Safari and Edge 
-    
-
 4.  Ensure the form provides the accurate future value, using the calculation formula in the script.js file. 
-    
-
 5.  Ensure the form provides accurate future value ,  using the calculation formula in the  script.js file when deposits and/ or withdrawals are applied or neither are applied. 
-    
-
 6.  Ensure the correct compound annual growth rate (cagr) is calculated based within the investment results and investment breakdown. 
     
 
@@ -94,7 +79,7 @@ I used Primary-colour: Green #4CAF50.  I chose green as primary colour because i
  ### Fonts
 For the font-family I used Arial as the primary font for headings and paragraphs which is a simple, easily read and available on all user systems.  Sans-serif is declared as a secondary font to serve as a font fallback.   
 
-#### ** Wireframes **
+## **Wireframes**
 
 * Wireframe for one page site designed using Balsamiq software
 * [Main Form](documentation/compoundwireframe.png)
@@ -102,7 +87,7 @@ For the font-family I used Arial as the primary font for headings and paragraphs
 
   
 
-#### **Structure**    
+## **Structure**    
 
 * The structure of the site is informed by the scope, user and business goals as well as the principles of IXD (interaction design) to make sure I was conforming to user’s expectations and making everything as intuitive as I could.    The site has a simple structure made up of 1 page, consisting of the following features: Form  with a paragraph what the significance of a compound interest calculator is, its importance and function. Multiple labels assigned with an input field consisting of: 
 
@@ -134,11 +119,21 @@ For the font-family I used Arial as the primary font for headings and paragraphs
     
 
 *   Withdrawal Frequency (If selected, required to select an option from annually, semi-annually 
-    
 
   ## **Features**
+
+### **Functions**
+
+The following 4 founctions are implemented in my JavaScript code. Functions confirmed in [JSHint](https://jshint.com)
+
+| Number | Function                                          | Purpose                                                                                                                                                                                              |
+| ------ | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | DOM Content Loaded Add Event Listener             | Ensures all elements from html elemts are available before executing code and performing operations                                                                                                  |
+| 2      | form.addEventListener "submit" function           | Retrive user input values from form, validate inputs, validates conditions in loop, performs calculations and  displays results                                                                      |
+| 3      | reset.Button add EventListener (click" function") | Handles the reset button click event, when clicked all input form fields and results data is cleared.                                                                                                |
+| 4      | function calculateCAGR                            | Calculates the compound annual growth rate from the form inputs provided based on and applying the formula :CAGR = (Final Value / Initital Value)^ (1 / Number of Years) - 1 |
     
-## **Scenarios**  
+### **Scenarios**  
     
 
 ### Scenario 1 
@@ -185,7 +180,7 @@ Clicking OK and reentering a lower withdrawal amount and selecting Calculate my 
 
 The reset button below the ‘Calculate my Investment’ button enables all form input details to be cleared, investment results and breakdown results to be cleared” . Please see video attached . This occurs because the reset function is implemented using an event listener attached to the reset button. 
 
-![Reset Form\](documentation/compoundreset.mp4)
+![Reset Form](documentation/compoundreset.mp4)
 
 ## Technologies Used 
 
@@ -204,51 +199,6 @@ The reset button below the ‘Calculate my Investment’ button enables all form
 *   Screen reader was the website used to capture screenshot images of my site to add to my readme document [SceenRec](https://screenrec.com/) 
     
 
-## Deployment 
-
--   ### Deployment 
-    
-
-Github was used as version control. Visual studio code was the IDE used to build the website, code was added and commited in the terminal and then pushed to Github. This site is hosted using GitHub pages, deployed directly from the master branch. The deployed site will update automatically upon new commits to the master branch. In order for the site to deploy correctly on GitHub pages, the landing page must be named index.html. 
-
-To deploy this page to GitHub Pages from its , the following steps were taken:  
-
-1.  Open Code Institute workspace \[ Code Institute\] (https://codeinstitute-ide.net/workspaces) 
-    
-
-2.  Open the project repository \[GitHub repository\] (https://github.com/JModi16/Compound-Interest-Calculator) 
-    
-
-3.  From the menu items near the top of the page, select Settings. 
-    
-
-5.  Click on "Pages" in the left hand navigation panel. 
-    
-
-6.  Under "Source", choose which branch to deploy. This should be Main for newer repositories 
-    
-
-7.  Choose which folder to deploy from, usually "/root". 
-    
-
-8.  Click "Save", then wait for it to be deployed. Your URL will be displayed above "Source" 
-    
-
-#Credits 
-
-1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. I particularly enjoyed the Love Maths tutorial which inspired me to take on this project. Manuel Perez Romero from Bristol City College for his support and lecturing. 
-    
-
-2.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project. 
-    
-
-3.  Slack community channels - Their support and advise was good. 
-    
-
-4.  \[Compound Interest Calculator site\]([https://www.thecalculatorsite.com/](https://www.thecalculatorsite.com/)) This is where I obtained some formulas from and understood their functions. 
-    
-
-5.  My online banking portal to understand compounding and generate this idea, \[Halifax\](http://www.halifax.co.uk)
 
 # Testing
 
@@ -305,4 +255,80 @@ To deploy this page to GitHub Pages from its , the following steps were taken: �
 | Receiving alert when opening site  "Please ensure inputs are valid and greater than 0"                                                                                                                       | Moved declared variable ResultsTableBody inside submit event listener                                                                                                                                           | Yes      |
 
 
-  * [Reset Button](documentation/compoundreset.mp4)
+### **Physical Device Testing**
+
+| Device                  | Responsive |
+| ----------------------- | ---------- |
+| Iphone 7                | Yes        |
+| Iphone X                | Yes        |
+| Iphone 12               | Yes        |
+| Samsung 8               | Yes        |
+| Ipad 10th generation    | Yes        |
+| HP Intel core i5 laptop | Yes        |
+
+## **Manual Browser Testing**
+
+| Browser | Responsive |
+| ------- | ---------- |
+| Chrome  | Yes        |
+| Safari  | Yes        |
+| Edge    | Yes        |
+
+## **Incomplete Tasks**
+
+Below are tasks for this tasks for this project I intended to complete but were not accompplished. These tasks were not mandatory, but would have contributed to my site with stronger enhancements and more functions
+
+| Incomplete Tasks                                                                                                                     | Reasons                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Annual Increase input field  to calculate % increase of deposit, withdrawal or interest rate                                         | Complex code, many errors, high validation checks                                                                                                                             |
+| Implementing keydown listener so return key can be used instead of mouse click button to calculate investment                        | Caused  pop up alert as soon as opening site, form submission error in devtools . Could not fix, spent lot of time to adjust code in and out of event listener in DOM.        |
+| Optional  email generated  to end users with their investment results once calculation results are displayed for marketing purposes. | My  focused on testing , functionality of JavaScript, design for this project didn't enable me to complete this tasks                                                         |
+| Producing a chart.js for my site when investment results are generated                                                               | Errors were identified. However, the errors could have been fixed . I decided because the site had two results sections displayed presentably well, this no longert required. |
+
+
+## Deployment  
+    
+
+Github was used as version control. Visual studio code was the IDE used to build the website, code was added and commited in the terminal and then pushed to Github. This site is hosted using GitHub pages, deployed directly from the master branch. The deployed site will update automatically upon new commits to the master branch. In order for the site to deploy correctly on GitHub pages, the landing page must be named index.html. 
+
+To deploy this page to GitHub Pages from its , the following steps were taken:  
+
+1.  Open Code Institute workspace \[ Code Institute\] (https://codeinstitute-ide.net/workspaces) 
+    
+
+2.  Open the project repository \[GitHub repository\] (https://github.com/JModi16/Compound-Interest-Calculator) 
+    
+
+3.  From the menu items near the top of the page, select Settings. 
+    
+
+5.  Click on "Pages" in the left hand navigation panel. 
+    
+
+6.  Under "Source", choose which branch to deploy. This should be Main for newer repositories 
+    
+
+7.  Choose which folder to deploy from, usually "/root". 
+    
+
+8.  Click "Save", then wait for it to be deployed. Your URL will be displayed above "Source" 
+    
+
+## **Credits** 
+
+1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. I particularly enjoyed the Love Maths tutorial which inspired me to take on this project. Manuel Perez Romero from Bristol City College for his support and lecturing. 
+    
+
+2.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project. 
+    
+
+3.  Slack community channels - Their support and advise was good. 
+    
+
+4.  [Compound Interest Calculator site](https://www.thecalculatorsite.com/finance/calculators/compoundinterestcalculator.php) This is where I obtained some formulas from and understood their functions. However, the site is structured differently, results displayed differently  and the html, css and javascript code is combined into one file.
+    
+
+5.  My personal online banks website to understand compounding and help generate this idea [Halifax](https://www.halifax.co.uk/creditcards/interest-calculator.html). However, the site only provided online credit card interest and mortgage overpayment calculators not to calculate compounded interest over a period to include deposits and withdrawals.
+
+6.  [Youtube](https://youtu.be/e2xS22rNUgU?si=BhDssacSb657l0n4) This help me understand formula and functions.
+
