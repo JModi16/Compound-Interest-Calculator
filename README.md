@@ -36,6 +36,7 @@ The tool is not just limited to calculating the compounded future value using y
   * [Bugs on Site](#bugs-on-site)
   * [Physical Device Testing](#physical-device-testing)
   * [Manual Browser Testing](browser-testing)
+* [Incomplete Tasks](#incomplete-tasks)
 * [Deployment](#deployment)
 * [Credits](#credits)
   
@@ -281,9 +282,19 @@ The reset button below the ‘Calculate my Investment’ button enables all form
 | Safari  | Yes        |
 | Edge    | Yes        |
 
-## Deployment 
+## **Incomplete Tasks**
 
--   ### Deployment 
+Below are tasks for this tasks for this project I intended to complete but were not accompplished. These tasks were not mandatory, but would have contributed to my site with stronger enhancements and more functions
+
+| Incomplete Tasks                                                                                                                     | Reasons                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Annual Increase input field  to calculate % increase of deposit, withdrawal or interest rate                                         | Complex code, many errors, high validation checks                                                                                                                             |
+| Implementing keydown listener so return key can be used instead of mouse click button to calculate investment                        | Caused  pop up alert as soon as opening site, form submission error in devtools . Could not fix, spent lot of time to adjust code in and out of event listener in DOM.        |
+| Optional  email generated  to end users with their investment results once calculation results are displayed for marketing purposes. | My  focused on testing , functionality of JavaScript, design for this project didn't enable me to complete this tasks                                                         |
+| Producing a chart.js for my site when investment results are generated                                                               | Errors were identified. However, the errors could have been fixed . I decided because the site had two results sections displayed presentably well, this no longert required. |
+
+
+## Deployment  
     
 
 Github was used as version control. Visual studio code was the IDE used to build the website, code was added and commited in the terminal and then pushed to Github. This site is hosted using GitHub pages, deployed directly from the master branch. The deployed site will update automatically upon new commits to the master branch. In order for the site to deploy correctly on GitHub pages, the landing page must be named index.html. 
@@ -311,7 +322,7 @@ To deploy this page to GitHub Pages from its , the following steps were taken: �
 8.  Click "Save", then wait for it to be deployed. Your URL will be displayed above "Source" 
     
 
-#Credits 
+## **Credits** 
 
 1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. I particularly enjoyed the Love Maths tutorial which inspired me to take on this project. Manuel Perez Romero from Bristol City College for his support and lecturing. 
     
@@ -322,8 +333,8 @@ To deploy this page to GitHub Pages from its , the following steps were taken: �
 3.  Slack community channels - Their support and advise was good. 
     
 
-4.  [Compound Interest Calculator site]((https://www.thecalculatorsite.com/)) This is where I obtained some formulas from and understood their functions 
+4.  [Compound Interest Calculator site](https://www.thecalculatorsite.com/) This is where I obtained some formulas from and understood their functions. The site is structured differently, results displayed differently  and the html, css and javascript code is combined into one file.
     
 
-5.  My online banking portal to understand compounding and generate this idea, \[Halifax\](http://www.halifax.co.uk)
+5.  My personal online banks website to understand compounding and help generate this idea [Halifax](https://www.halifax.co.uk/creditcards/interest-calculator.html). However, the site only provided online credit card interest and mortgage overpayment calculators not to calculate compounded interest over a period to include deposits and withdrawals.
 
