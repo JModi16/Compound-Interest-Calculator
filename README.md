@@ -27,6 +27,7 @@ The tool is not just limited to calculating the compounded future value using y
 * [Structure](#structure)
   [Features](#Features)
    *[Scenarios](#Scenarios)
+   *[Functions](#Functions)
 * [Technologies Used](#technologies-used)
 * [ Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 * [Testing](#Testing)
@@ -97,7 +98,7 @@ I used Primary-colour: Green #4CAF50.  I chose green as primary colour because i
  ### Fonts
 For the font-family I used Arial as the primary font for headings and paragraphs which is a simple, easily read and available on all user systems.  Sans-serif is declared as a secondary font to serve as a font fallback.   
 
-#### ** Wireframes **
+## **Wireframes**
 
 * Wireframe for one page site designed using Balsamiq software
 * [Main Form](documentation/compoundwireframe.png)
@@ -105,7 +106,7 @@ For the font-family I used Arial as the primary font for headings and paragraphs
 
   
 
-#### **Structure**    
+## **Structure**    
 
 * The structure of the site is informed by the scope, user and business goals as well as the principles of IXD (interaction design) to make sure I was conforming to user’s expectations and making everything as intuitive as I could.    The site has a simple structure made up of 1 page, consisting of the following features: Form  with a paragraph what the significance of a compound interest calculator is, its importance and function. Multiple labels assigned with an input field consisting of: 
 
@@ -137,11 +138,21 @@ For the font-family I used Arial as the primary font for headings and paragraphs
     
 
 *   Withdrawal Frequency (If selected, required to select an option from annually, semi-annually 
-    
 
   ## **Features**
+
+### **Functions**
+
+The following 4 founctions are implemented in my JavaScript code. Functions confirmed in [JSHint](https://jshint.com)
+
+| Number | Function                                          | Purpose                                                                                                                                                                                              |
+| ------ | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | DOM Content Loaded Add Event Listener             | Ensures all elements from html elemts are available before executing code and performing operations                                                                                                  |
+| 2      | form.addEventListener "submit" function           | Retrive user input values from form, validate inputs, validates conditions in loop, performs calculations and  displays results                                                                      |
+| 3      | reset.Button add EventListener (click" function") | Handles the reset button click event, when clicked all input form fields and results data is cleared.                                                                                                |
+| 4      | function calculateCAGR                            | Calculates the compound annual growth rate from the form inputs provided based on and applying the formula :CAGR = (Final Value / Initital Value)^ (1 / Number of Years) - 1 |
     
-## **Scenarios**  
+### **Scenarios**  
     
 
 ### Scenario 1 
