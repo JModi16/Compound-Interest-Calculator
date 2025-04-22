@@ -333,8 +333,10 @@ To deploy this page to GitHub Pages from its , the following steps were taken: Â
 3.  Slack community channels - Their support and advise was good.Â 
     
 
-4.  [Compound Interest Calculator site](https://www.thecalculatorsite.com/) This is where I obtained some formulas from and understood their functions. The site is structured differently, results displayed differently  and the html, css and javascript code is combined into one file.
+4.  [Compound Interest Calculator site](https://www.thecalculatorsite.com/finance/calculators/compoundinterestcalculator.php) This is where I obtained some formulas from and understood their functions. However, the site is structured differently, results displayed differently  and the html, css and javascript code is combined into one file.
     
 
 5.  My personal online banks website to understand compounding and help generate this idea [Halifax](https://www.halifax.co.uk/creditcards/interest-calculator.html). However, the site only provided online credit card interest and mortgage overpayment calculators not to calculate compounded interest over a period to include deposits and withdrawals.
+
+6.  [Youtube](https://youtu.be/e2xS22rNUgU?si=BhDssacSb657l0n4) This help me understand formula and functions.
 
