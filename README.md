@@ -34,6 +34,8 @@ The tool is not just limited to calculating the compounded future value using y
   * [Lighthouse-testing](#lighthouse-testing)
   * [User-Testing-Functionality](#user-testing-functionality)
   * [Bugs on Site](#bugs-on-site)
+  * [Physical Device Testing](#physical-device-testing)
+  * [Manual Browser Testing](browser-testing)
 * [Deployment](#deployment)
 * [Credits](#credits)
   
@@ -260,7 +262,24 @@ The reset button below the ‘Calculate my Investment’ button enables all form
 | Receiving alert when opening site  "Please ensure inputs are valid and greater than 0"                                                                                                                       | Moved declared variable ResultsTableBody inside submit event listener                                                                                                                                           | Yes      |
 
 
-[Reset Button](documentation/compoundreset.mp4)
+### **Physical Device Testing**
+
+| Device                  | Responsive |
+| ----------------------- | ---------- |
+| Iphone 7                | Yes        |
+| Iphone X                | Yes        |
+| Iphone 12               | Yes        |
+| Samsung 8               | Yes        |
+| Ipad 10th generation    | Yes        |
+| HP Intel core i5 laptop | Yes        |
+
+## **Manual Browser Testing**
+
+| Browser | Responsive |
+| ------- | ---------- |
+| Chrome  | Yes        |
+| Safari  | Yes        |
+| Edge    | Yes        |
 
 ## Deployment 
 
