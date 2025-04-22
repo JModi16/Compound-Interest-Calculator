@@ -185,7 +185,7 @@ Clicking OK and reentering a lower withdrawal amount and selecting Calculate my 
 
 The reset button below the ‘Calculate my Investment’ button enables all form input details to be cleared, investment results and breakdown results to be cleared” . Please see video attached . This occurs because the reset function is implemented using an event listener attached to the reset button. 
 
-![Reset Form\](documentation/compoundreset.mp4)
+![Reset Form](documentation/compoundreset.mp4)
 
 ## Technologies Used 
 
@@ -204,51 +204,6 @@ The reset button below the ‘Calculate my Investment’ button enables all form
 *   Screen reader was the website used to capture screenshot images of my site to add to my readme document [SceenRec](https://screenrec.com/) 
     
 
-## Deployment 
-
--   ### Deployment 
-    
-
-Github was used as version control. Visual studio code was the IDE used to build the website, code was added and commited in the terminal and then pushed to Github. This site is hosted using GitHub pages, deployed directly from the master branch. The deployed site will update automatically upon new commits to the master branch. In order for the site to deploy correctly on GitHub pages, the landing page must be named index.html. 
-
-To deploy this page to GitHub Pages from its , the following steps were taken:  
-
-1.  Open Code Institute workspace \[ Code Institute\] (https://codeinstitute-ide.net/workspaces) 
-    
-
-2.  Open the project repository \[GitHub repository\] (https://github.com/JModi16/Compound-Interest-Calculator) 
-    
-
-3.  From the menu items near the top of the page, select Settings. 
-    
-
-5.  Click on "Pages" in the left hand navigation panel. 
-    
-
-6.  Under "Source", choose which branch to deploy. This should be Main for newer repositories 
-    
-
-7.  Choose which folder to deploy from, usually "/root". 
-    
-
-8.  Click "Save", then wait for it to be deployed. Your URL will be displayed above "Source" 
-    
-
-#Credits 
-
-1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. I particularly enjoyed the Love Maths tutorial which inspired me to take on this project. Manuel Perez Romero from Bristol City College for his support and lecturing. 
-    
-
-2.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project. 
-    
-
-3.  Slack community channels - Their support and advise was good. 
-    
-
-4.  \[Compound Interest Calculator site\]([https://www.thecalculatorsite.com/](https://www.thecalculatorsite.com/)) This is where I obtained some formulas from and understood their functions. 
-    
-
-5.  My online banking portal to understand compounding and generate this idea, \[Halifax\](http://www.halifax.co.uk)
 
 # Testing
 
@@ -305,4 +260,51 @@ To deploy this page to GitHub Pages from its , the following steps were taken: �
 | Receiving alert when opening site  "Please ensure inputs are valid and greater than 0"                                                                                                                       | Moved declared variable ResultsTableBody inside submit event listener                                                                                                                                           | Yes      |
 
 
-  * [Reset Button](documentation/compoundreset.mp4)
+[Reset Button](documentation/compoundreset.mp4)
+
+## Deployment 
+
+-   ### Deployment 
+    
+
+Github was used as version control. Visual studio code was the IDE used to build the website, code was added and commited in the terminal and then pushed to Github. This site is hosted using GitHub pages, deployed directly from the master branch. The deployed site will update automatically upon new commits to the master branch. In order for the site to deploy correctly on GitHub pages, the landing page must be named index.html. 
+
+To deploy this page to GitHub Pages from its , the following steps were taken:  
+
+1.  Open Code Institute workspace \[ Code Institute\] (https://codeinstitute-ide.net/workspaces) 
+    
+
+2.  Open the project repository \[GitHub repository\] (https://github.com/JModi16/Compound-Interest-Calculator) 
+    
+
+3.  From the menu items near the top of the page, select Settings. 
+    
+
+5.  Click on "Pages" in the left hand navigation panel. 
+    
+
+6.  Under "Source", choose which branch to deploy. This should be Main for newer repositories 
+    
+
+7.  Choose which folder to deploy from, usually "/root". 
+    
+
+8.  Click "Save", then wait for it to be deployed. Your URL will be displayed above "Source" 
+    
+
+#Credits 
+
+1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. I particularly enjoyed the Love Maths tutorial which inspired me to take on this project. Manuel Perez Romero from Bristol City College for his support and lecturing. 
+    
+
+2.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project. 
+    
+
+3.  Slack community channels - Their support and advise was good. 
+    
+
+4.  [Compound Interest Calculator site]((https://www.thecalculatorsite.com/)) This is where I obtained some formulas from and understood their functions 
+    
+
+5.  My online banking portal to understand compounding and generate this idea, \[Halifax\](http://www.halifax.co.uk)
+
