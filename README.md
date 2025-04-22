@@ -305,10 +305,16 @@ To deploy this page to GitHub Pages from its , the following steps were taken: �
 ## **Credits** 
 
 1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. Along with javascript essentials and exercises,I particularly enjoyed the Love Maths tutorial which inspired me to take on this project. [Code Institute Love Maths] (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+5/courseware/2d651bf3f23e48aeb9b9218871912b2e/234519d86b76411aa181e76a55dabe70)
-2.  Manuel Perez Romero from Bristol City College for his support and lecturing. 
-3.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project. 
-4.  Slack community channels - Their support and advise was good. 
+  
+2.  Manuel Perez Romero from Bristol City College for his support and lecturing.
+   
+3.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project.
+   
+4.  Slack community channels - Their support and advise was good.
+  
 5.  [Compound Interest Calculator site](https://www.thecalculatorsite.com/finance/calculators/compoundinterestcalculator.php) This is where I obtained some formulas from and understood their functions. However, the site is structured differently, results displayed differently  and the html, css and javascript code is combined into one file.
+   
 6.  My personal online banks website to understand compounding and help generate this idea [Halifax](https://www.halifax.co.uk/creditcards/interest-calculator.html). However, the site only provided online credit card interest and mortgage overpayment calculators not to calculate compounded interest over a period to include deposits and withdrawals
+   
 7.  [Youtube](https://youtu.be/e2xS22rNUgU?si=BhDssacSb657l0n4) This helped me understand formula and functions.
 
