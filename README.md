@@ -16,14 +16,14 @@ The tool is not just limited to calculating the compounded future value using y
 * [Languages Used](#languages-used)
 * [User-Experience-Design](user-experience-design)
   * [User Stories](#user-stories)
-* [Design](#design)
+* [Design](#Design)
   * [Colour](#Colour)
   * [Fonts](#Fonts)
 * [Wireframes](#Wireframes)
 * [Structure](#Structure)
   [Features](#Features)
-   *[Scenarios](#Scenarios)
-   *[Functions](#Functions)
+   * [Scenarios](#Scenarios)
+   * [Functions](#Functions)
 * [Technologies Used](#technologies-used)
 * [ Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 * [Testing](#Testing)
@@ -70,13 +70,13 @@ I personally need to plan and would like to help family plan to build up their i
 
    
 
-### **Design**
+## **Design**
 
  ### **Colour**
 
 I used Primary-colour: Green #4CAF50.  I chose green as primary colour because its positive when investing and catchy for end users. 
 
- ### Fonts
+ ## Fonts
 For the font-family I used Arial as the primary font for headings and paragraphs which is a simple, easily read and available on all user systems.  Sans-serif is declared as a secondary font to serve as a font fallback.   
 
 ## **Wireframes**
@@ -294,41 +294,21 @@ Github was used as version control. Visual studio code was the IDE used to build
 To deploy this page to GitHub Pages from its , the following steps were taken:  
 
 1.  Open Code Institute workspace \[ Code Institute\] (https://codeinstitute-ide.net/workspaces) 
-    
-
 2.  Open the project repository \[GitHub repository\] (https://github.com/JModi16/Compound-Interest-Calculator) 
-    
-
-3.  From the menu items near the top of the page, select Settings. 
-    
-
-5.  Click on "Pages" in the left hand navigation panel. 
-    
-
-6.  Under "Source", choose which branch to deploy. This should be Main for newer repositories 
-    
-
-7.  Choose which folder to deploy from, usually "/root". 
-    
-
-8.  Click "Save", then wait for it to be deployed. Your URL will be displayed above "Source" 
+3.  From the menu items near the top of the page, select Settings
+4.  Click on "Pages" in the left hand navigation panel. 
+5.  Under "Source", choose which branch to deploy. This should be Main for newer repositories 
+6.  Choose which folder to deploy from, usually "/root". 
+7.  Click "Save", then wait for it to be deployed. Your URL will be displayed above "Source" 
     
 
 ## **Credits** 
 
-1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. I particularly enjoyed the Love Maths tutorial which inspired me to take on this project. Manuel Perez Romero from Bristol City College for his support and lecturing. 
-    
-
-2.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project. 
-    
-
-3.  Slack community channels - Their support and advise was good. 
-    
-
-4.  [Compound Interest Calculator site](https://www.thecalculatorsite.com/finance/calculators/compoundinterestcalculator.php) This is where I obtained some formulas from and understood their functions. However, the site is structured differently, results displayed differently  and the html, css and javascript code is combined into one file.
-    
-
-5.  My personal online banks website to understand compounding and help generate this idea [Halifax](https://www.halifax.co.uk/creditcards/interest-calculator.html). However, the site only provided online credit card interest and mortgage overpayment calculators not to calculate compounded interest over a period to include deposits and withdrawals.
-
-6.  [Youtube](https://youtu.be/e2xS22rNUgU?si=BhDssacSb657l0n4) This help me understand formula and functions.
+1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. Along with javascript essentials and exercises,I particularly enjoyed the Love Maths tutorial which inspired me to take on this project. [Code Institute Love Maths] (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+5/courseware/2d651bf3f23e48aeb9b9218871912b2e/234519d86b76411aa181e76a55dabe70)
+2.  Manuel Perez Romero from Bristol City College for his support and lecturing. 
+3.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project. 
+4.  Slack community channels - Their support and advise was good. 
+5.  [Compound Interest Calculator site](https://www.thecalculatorsite.com/finance/calculators/compoundinterestcalculator.php) This is where I obtained some formulas from and understood their functions. However, the site is structured differently, results displayed differently  and the html, css and javascript code is combined into one file.
+6.  My personal online banks website to understand compounding and help generate this idea [Halifax](https://www.halifax.co.uk/creditcards/interest-calculator.html). However, the site only provided online credit card interest and mortgage overpayment calculators not to calculate compounded interest over a period to include deposits and withdrawals
+7.  [Youtube](https://youtu.be/e2xS22rNUgU?si=BhDssacSb657l0n4) This helped me understand formula and functions.
 
