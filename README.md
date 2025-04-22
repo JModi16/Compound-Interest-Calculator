@@ -13,18 +13,14 @@ The tool is not just limited to calculating the compounded future value using y
 
 ## Contents
 
- 
 * [Languages Used](#languages-used)
-* [User Experience (UX)](#user-experience-ux)
-  * [Project Goals](#project-goals)
-  * [User Goals](#user-goals)
-  * [Site Owner Goals](#site-owner-goals)
+* [User-Experience-Design](user-experience-design)
   * [User Stories](#user-stories)
 * [Design](#design)
-  * [Colour](colour)
-  * [Fonts](fonts)
-* [Wireframes](#wireframes)
-* [Structure](#structure)
+  * [Colour](#Colour)
+  * [Fonts](#Fonts)
+* [Wireframes](#Wireframes)
+* [Structure](#Structure)
   [Features](#Features)
    *[Scenarios](#Scenarios)
    *[Functions](#Functions)
@@ -41,45 +37,30 @@ The tool is not just limited to calculating the compounded future value using y
 * [Deployment](#deployment)
 * [Credits](#credits)
   
-## **Languages Used**
+## Languages Used
 
-* HTML   
-* CSS3
-* JavaScript
-
-# User Experience (UX)  
+*  [HTML5](https://en.wikipedia.org/wiki/HTML5)
+*  [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+*  [JS](https://en.wikipedia.org/wiki/JavaScript)
+  
+## User-Experience-Design
 
 ## User Stories         
 
 ### First Time and Regular Visitor Goals 
-1.  As a first time or regular user, coming from a totally non-technical background I want to check the value of my future value using a desired value : Investment amount, rate and select the amount of compound times per year. 
-    
+1.  As a first time or regular user, coming from a totally non-technical background I want to check the value of my future value using a desired value : Investment amount, rate and select the amount of compound times per year.    
 2.  As a first time user or regular user, I want to be able to change the investment amount, interest rate and select the amount of compound times per year. 
-    
-
 3.  As a first time user or regular user to check the value of my investment, using a desired value : Investment amount, interest rate and select the amount of compound times per year, deposit amount, select deposit frequency, select the withdrawal amount and select the withdrawal frequency.   
-    
-
 4.  As a first time and regular user, I want to be able to reset the previous form, enabling all input fields and future investment results and breakdown value are deleted, enabling the form to be submitted with blank input values. 
     
 
 ### As a Developer, I want to: 
 
 1.  Ensure that all input fields on the form which are mandatory are completed.  
-    
-
 2.  Ensure the form is accessible on pc, mobile and tablet devices 
-    
-
 3.  Ensure form is accessible on Chrome, Safari and Edge 
-    
-
 4.  Ensure the form provides the accurate future value, using the calculation formula in the script.js file. 
-    
-
 5.  Ensure the form provides accurate future value ,  using the calculation formula in the  script.js file when deposits and/ or withdrawals are applied or neither are applied. 
-    
-
 6.  Ensure the correct compound annual growth rate (cagr) is calculated based within the investment results and investment breakdown. 
     
 
@@ -335,19 +316,21 @@ To deploy this page to GitHub Pages from its , the following steps were taken: �
 
 ## **Credits** 
 
-1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. I particularly enjoyed the Love Maths tutorial which inspired me to take on this project. Manuel Perez Romero from Bristol City College for his support and lecturing. 
+1.  Code Institute - It was a great pleasure to learn HTML, CSS, JavaScript  Participating in the course allows me to develop my frontend and JavaScript development skills. I particularly enjoyed the Love Maths tutorial which inspired me to take on this project, due to my passion with data and numbers. [CodeInstitute Love Maths](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+5/courseware/2d651bf3f23e48aeb9b9218871912b2e/234519d86b76411aa181e76a55dabe70)
+
+2.  Manuel Perez Romero from Bristol City College for his support and lecturing. 
     
 
-2.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project. 
+4.  Gareth McGirr - my mentor, was helpful and provided me good ideas and solutions to progress with this project. 
     
 
-3.  Slack community channels - Their support and advise was good. 
+5.  Slack community channels - Their support and advise was good. 
     
 
-4.  [Compound Interest Calculator site](https://www.thecalculatorsite.com/finance/calculators/compoundinterestcalculator.php) This is where I obtained some formulas from and understood their functions. However, the site is structured differently, results displayed differently  and the html, css and javascript code is combined into one file.
+6.  [Compound Interest Calculator site](https://www.thecalculatorsite.com/finance/calculators/compoundinterestcalculator.php) This is where I obtained some formulas from and understood their functions. However, the site is structured differently, results displayed differently  and the html, css and javascript code is combined into one file.
     
 
-5.  My personal online banks website to understand compounding and help generate this idea [Halifax](https://www.halifax.co.uk/creditcards/interest-calculator.html). However, the site only provided online credit card interest and mortgage overpayment calculators not to calculate compounded interest over a period to include deposits and withdrawals.
+7.  My personal online banks website to understand compounding and help generate this idea [Halifax](https://www.halifax.co.uk/creditcards/interest-calculator.html). However, the site only provided online credit card interest and mortgage overpayment calculators not to calculate compounded interest over a period to include deposits and withdrawals.
 
-6.  [Youtube](https://youtu.be/e2xS22rNUgU?si=BhDssacSb657l0n4) This help me understand formula and functions.
+8.  [Youtube](https://youtu.be/e2xS22rNUgU?si=BhDssacSb657l0n4) This help me understand formula and functions.
 
